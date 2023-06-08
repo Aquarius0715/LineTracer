@@ -142,20 +142,4 @@ int main() {
       printf("middle\n");
       ms = 6;
     }
-    else if (digitalRead(GPIO_MR) == HIGH) {
-      printf("middle left\n");
-      ls = 3; ms=2;
-    }
-    else if (digitalRead(GPIO_R) == HIGH) {
-      printf("left\n");
-      ls = 5;
-    }
-    else {
-      printf("not_read\n");
-      ms=6;
-    }
-    motor_drive(fd, ms+ls, ms+rs);
-    delay(50);
-  }
-  return 0;
-}
+    e

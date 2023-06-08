@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <wiringPi.h>
 #include <wiringPiI2C.h>
+#include <limits.h>
 
 // PWMユニットのI2Cアドレス
 #define PWMI2CADR 0x40
@@ -106,6 +107,17 @@ int motor_drive(int fd, int lm, int rm) {
   return 0;
 }
 
+void printb(unsigned int v) {
+  unsigned int mask = (int)1 << (sizeof(v) * CHAR_BIT - 1);
+  do putchar(mask & v ? '1' : '0');
+  while (mask >>= 1);
+}
+
+void putb(unsigned int v) {
+  putchar('0'), putchar('b'), printb(v), putchar('\n');
+}
+
+
 int main() {
   int fd;
   wiringPiSetupGpio();
@@ -126,34 +138,33 @@ int main() {
   }
 
   int ms, ls, rs;
+  int read;
   while (1) {
     ms = 0;
     ls = 0;
     rs = 0;
-    if (digitalRead(GPIO_L) == HIGH) {
-      printf("right\n");
-      rs = 5;
+
+    read = 0b00000;
+    
+    if (digitalRead(GPIO_L) == HIGH){
+      read += 0b10000;
+      printf("%d\n",read);
     }
-    else if (digitalRead(GPIO_ML) == HIGH) {
-      printf("middle right\n");
-      rs = 3; ms=2;
+    if (digitalRead(GPIO_ML) == HIGH){
+      read += 0b01000;
     }
-    else if (digitalRead(GPIO_M) == HIGH) {
-      printf("middle\n");
-      ms = 6;
+    if (digitalRead(GPIO_M) == HIGH){
+      read += 0b00100;
     }
-    else if (digitalRead(GPIO_MR) == HIGH) {
-      printf("middle left\n");
-      ls = 3; ms=2;
+    if (digitalRead(GPIO_MR) == HIGH){
+      read += 0b00010;
     }
-    else if (digitalRead(GPIO_R) == HIGH) {
-      printf("left\n");
-      ls = 5;
+    if (digitalRead(GPIO_R) == HIGH){
+      read += 0b00001;
     }
-    else {
-      printf("not_read\n");
-      ms=6;
-    }
+
+    printf("%d\n",read);
+    
     motor_drive(fd, ms+ls, ms+rs);
     delay(50);
   }

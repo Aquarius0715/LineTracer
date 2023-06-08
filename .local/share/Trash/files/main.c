@@ -8,7 +8,6 @@ int main(){
     int p_ls,p_rs;
     int fd = motor_init();
     int bi = 0b00000;
-    int p_bi;
     motor_drive(fd,0,0);
     while(1){
         ls=0;
@@ -21,15 +20,15 @@ int main(){
                 state=1;
             }
             if(bi&(1<<1)){
-		ls+=12;
-		rs+=6;
+		ls+=6;
+		rs+=10;
             if(bi&(1<<2)){
-                ls+=16;
-                rs+=16;
+                ls+=12;
+                rs+=12;
             }
             if(bi&(1<<3)){
-		ls+=6;
-		rs+=12;
+		ls+=12;
+		rs+=6;
             if(bi&(1<<4)){
                 ls+=16;
                 rs+=8;

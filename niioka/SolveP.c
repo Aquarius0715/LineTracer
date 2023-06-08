@@ -120,7 +120,6 @@ int main() {
   delay(1);
   wiringPiI2CWriteReg8(fd, PWM_MODE1, 0x80);
 
-  //コースに置いたらスタート
   while(1){
     if(digitalRead(GPIO_L) == LOW && digitalRead(GPIO_R) == LOW) break;
   }
@@ -152,7 +151,7 @@ int main() {
     }
     else {
       printf("not_read\n");
-      ms=6;
+      rs=6;
     }
     motor_drive(fd, ms+ls, ms+rs);
     delay(50);
