@@ -1,0 +1,21 @@
+#ifndef stdio
+#include<stdio.h>
+#endif
+#ifndef stdlib
+#include<stdlib.h>
+#endif
+#define OS_L 5
+#define OS_ML 6
+#define OS_M 13
+#define OS_MR 19
+#define OS_R 2
+
+int sensor(){
+    int bi = 0b00000;
+    if(digitalRead(OS_L)==1)bi+=0b10000;
+    if(digitalRead(OS_ML)==1)bi+=0b01000;
+    if(digitalRead(OS_M)==1)bi+=0b00100;
+    if(digitalRead(OS_MR)==1)bi+=0b00010;
+    if(digitalRead(OS_R)==1)bi+=0b00001;
+    return bi;
+}

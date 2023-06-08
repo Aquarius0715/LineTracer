@@ -1,0 +1,32 @@
+2023/04/27-11:13:17.576 810 Creating DB /home/raspi4-01/.config/chromium/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm since it was missing.
+2023/04/27-11:13:17.615 810 Delete type=3 #1
+2023/04/27-11:13:27.115 811 Level-0 table #5: started
+2023/04/27-11:13:27.329 811 Level-0 table #5: 1749160 bytes OK
+2023/04/27-11:13:27.337 811 Delete type=0 #3
+2023/04/27-11:13:32.748 895 Level-0 table #7: started
+2023/04/27-11:13:32.892 895 Level-0 table #7: 1235086 bytes OK
+2023/04/27-11:13:32.898 895 Delete type=0 #4
+2023/04/27-11:13:56.405 895 Level-0 table #9: started
+2023/04/27-11:13:56.586 895 Level-0 table #9: 1701699 bytes OK
+2023/04/27-11:13:56.592 895 Delete type=0 #6
+2023/04/27-11:14:18.069 812 Level-0 table #11: started
+2023/04/27-11:14:18.264 812 Level-0 table #11: 1960171 bytes OK
+2023/04/27-11:14:18.269 812 Delete type=0 #8
+2023/04/27-11:16:32.801 812 Level-0 table #13: started
+2023/04/27-11:16:33.163 812 Level-0 table #13: 2236858 bytes OK
+2023/04/27-11:16:33.184 812 Delete type=0 #10
+2023/04/27-11:16:33.396 812 Level-0 table #15: started
+2023/04/27-11:16:33.811 812 Level-0 table #15: 3251475 bytes OK
+2023/04/27-11:16:33.834 812 Delete type=0 #12
+2023/04/27-11:16:33.837 812 Compacting 4@0 + 1@1 files
+2023/04/27-11:16:34.551 812 Generated table #16@0: 12 keys, 2163295 bytes
+2023/04/27-11:16:34.921 812 Generated table #17@0: 9 keys, 2135809 bytes
+2023/04/27-11:16:35.469 812 Generated table #18@0: 4 keys, 3502682 bytes
+2023/04/27-11:16:35.817 812 Generated table #19@0: 11 keys, 1813796 bytes
+2023/04/27-11:16:35.817 812 Compacted 4@0 + 1@1 files => 9615582 bytes
+2023/04/27-11:16:35.821 812 compacted to: files[ 0 4 1 0 0 0 0 ]
+2023/04/27-11:16:35.822 812 Delete type=2 #11
+2023/04/27-11:16:35.822 812 Delete type=2 #15
+2023/04/27-11:16:35.822 812 Delete type=2 #9
+2023/04/27-11:16:35.822 812 Delete type=2 #13
+2023/04/27-11:16:35.822 812 Delete type=2 #7
