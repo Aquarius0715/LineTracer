@@ -124,34 +124,42 @@ int main() {
     if(digitalRead(GPIO_L) == LOW && digitalRead(GPIO_R) == LOW) break;
   }
 
-  int ms, ls, rs;
+  int ms, ls, rs, cnt;
   while (1) {
     ms = 0;
     ls = 0;
     rs = 0;
+    cnt = 0;
     if (digitalRead(GPIO_L) == HIGH) {
       printf("right\n");
-      rs = 7;
+      rs = 5;
+      cnt++;
     }
-    else if (digitalRead(GPIO_ML) == HIGH) {
+    if (digitalRead(GPIO_ML) == HIGH) {
       printf("middle right\n");
-      rs = 4; ms=3;
+      rs = 3; ms=2;
+      cnt++;
     }
-    else if (digitalRead(GPIO_M) == HIGH) {
+    if (digitalRead(GPIO_M) == HIGH) {
       printf("middle\n");
-      ms = 8;
+      ms = 6;
+      cnt++;
     }
-    else if (digitalRead(GPIO_MR) == HIGH) {
+    if (digitalRead(GPIO_MR) == HIGH) {
       printf("middle left\n");
-      ls = 4; ms=3;
+      ls = 3; ms=2;
+      cnt++;
     }
-    else if (digitalRead(GPIO_R) == HIGH) {
+    if (digitalRead(GPIO_R) == HIGH) {
       printf("left\n");
-      ls = 7;
+      ls = 5;
+      cnt++;
     }
-    else {
-      printf("not_read\n");
+    if (cnt == 0) {
+	printf("not_read\n");
       ls=6;
+      ms = 0;
+      rs = 0;
     }
     motor_drive(fd, ms+ls, ms+rs);
     delay(50);

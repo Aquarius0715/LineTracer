@@ -117,36 +117,9 @@ void putb(unsigned int v) {
   putchar('0'), putchar('b'), printb(v), putchar('\n');
 }
 
+int sensor(){
+  int read = 0b00000;
 
-int main() {
-  int fd;
-  wiringPiSetupGpio();
-  fd = wiringPiI2CSetup(PWMI2CADR);
-  if (fd < 0) {
-    printf("I2Cの初期化に失敗しました。終了します。\n");
-    exit(EXIT_FAILURE);
-  }
-  wiringPiI2CWriteReg8(fd, PWM_PRESCALE, 61);
-  wiringPiI2CWriteReg8(fd, PWM_MODE1, 0x10);
-  wiringPiI2CWriteReg8(fd, PWM_MODE1, 0);
-  delay(1);
-  wiringPiI2CWriteReg8(fd, PWM_MODE1, 0x80);
-
-  int ms, ls, rs;
-  int read;
-
-  //コースに置いたらスタート
-  while(1){
-    if(digitalRead(GPIO_L) == LOW && digitalRead(GPIO_R) == LOW) break;
-  }
-
-  while (1) {
-    ms = 0;
-    ls = 0;
-    rs = 0;
-
-    read = 0b00000;
-    
     if (digitalRead(GPIO_L) == HIGH){
       printf("L,");
       read += 0b10000;
@@ -169,6 +142,39 @@ int main() {
     }
     printf("\n");
 
+    return read;
+}
+
+
+int main() {
+  int fd;
+  wiringPiSetupGpio();
+  fd = wiringPiI2CSetup(PWMI2CADR);
+  if (fd < 0) {
+    printf("I2Cの初期化に失敗しました。終了します。\n");
+    exit(EXIT_FAILURE);
+  }
+  wiringPiI2CWriteReg8(fd, PWM_PRESCALE, 61);
+  wiringPiI2CWriteReg8(fd, PWM_MODE1, 0x10);
+  wiringPiI2CWriteReg8(fd, PWM_MODE1, 0);
+  delay(1);
+  wiringPiI2CWriteReg8(fd, PWM_MODE1, 0x80);
+
+  int ms, ls, rs;
+  int read;
+  int all_ct=0;
+
+  //コースに置いたらスタート
+  while(1){
+    if(digitalRead(GPIO_L) == LOW && digitalRead(GPIO_R) == LOW) break;
+  }
+
+  while (1) {
+    ms = 0;
+    ls = 0;
+    rs = 0;
+
+    read = sensor();
     
     /*モーター駆動*/
     //L
@@ -176,24 +182,33 @@ int main() {
       rs=8;
     }
     //ML
-    else if(read==0b01000){
+    else if(read==0b01000 || read==0b11000){
       ms=5; rs=3;
     }
     //M
-    else if(read==0b00100){
+    else if(read==0b00100 || read==0b01100 || read==0b00110){
       ms=8;
     }
     //MR
-    else if(read==0b00010){
+    else if(read==0b00010 || read==0b00011){
       ms=5; ls=3;
     }
     //R
     else if(read==0b00001){
       ls=8;
     }
-    else if(read==0b00000){
-      ms=8;
+    else if(read==0b00000 && all_ct%2==0){
+      ls=8;
+      all_ct++;
     }
+    else if(read==0b00000 && all_ct%2==1){
+      rs=8;
+      all_ct++;
+    }
+    else(all_ct>10){
+	break;
+    }
+
     motor_drive(fd, ms+ls, ms+rs);
     delay(100);
   }
