@@ -132,32 +132,32 @@ int main() {
     cnt = 0;
     if (digitalRead(GPIO_L) == HIGH) {
       printf("right\n");
-      rs = 5;
+      rs = 7; ls = 0; ms = 0;
       cnt++;
     }
     if (digitalRead(GPIO_ML) == HIGH) {
       printf("middle right\n");
-      rs = 3; ms=2;
+      rs = 4; ls = 0; ms = 3;
       cnt++;
     }
     if (digitalRead(GPIO_M) == HIGH) {
       printf("middle\n");
-      ms = 6;
+      rs = 0; ls = 0; ms = 7;
       cnt++;
     }
     if (digitalRead(GPIO_MR) == HIGH) {
       printf("middle left\n");
-      ls = 3; ms=2;
+      rs = 0; ls = 4; ms = 3;
       cnt++;
     }
     if (digitalRead(GPIO_R) == HIGH) {
       printf("left\n");
-      ls = 5;
+      rs = 0; ls = 7; ms = 0;
       cnt++;
     }
     if (cnt == 0) {
-	printf("not_read\n");
-      ls=6;
+		printf("not_read\n");
+		ls = 7;
       ms = 0;
       rs = 0;
     }
