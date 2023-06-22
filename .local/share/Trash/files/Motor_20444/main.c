@@ -6,6 +6,7 @@
 int main(){
     int ls,rs,state;
     int p_ls,p_rs;
+    int start = 0;
     int fd = motor_init();
     int bi = 0b00000;
     motor_drive(fd,0,0);
@@ -13,40 +14,34 @@ int main(){
         ls=0;
         rs=0;
         bi=sensor();
-        if(bi != 0b00000 && state!=3){
+	if(bi==00100)start=1;
+        if((state == 0 || bi != 0b00000) && start){
             if(bi&(1<<0)){
                 ls+=8;
                 rs+=16;
                 state=1;
             }
             if(bi&(1<<1)){
-		ls+=16;
-		rs+=10;
-	    }
+		ls+=12;
+		rs+=6;
             if(bi&(1<<2)){
                 ls+=16;
                 rs+=16;
-		state=0;
             }
             if(bi&(1<<3)){
-		ls+=10;
-		rs+=16;
-	    }
+		ls+=6;
+		rs+=12;
             if(bi&(1<<4)){
                 ls+=16;
                 rs+=8;
                 state=2;
             }
-	    if(bi==0b11011)state=3;
         }else{
 	    if(state==0){
 	      motor_drive(fd,16,8);
-	      while(bi!=0b00100)bi=sensor();
-	    }
-	    if(state==3){
-	      motor_drive(fd,0,0);
-	      while(bi!=0b00100)bi=sensor();
-	      state=0;
+	      while(!(bi&(1<<2))){
+		bi=sensor();
+	      }
 	    }
             if(state==1)rs=16,ls=-8;
             if(state==2)rs=-8,ls=16;

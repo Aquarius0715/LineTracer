@@ -132,13 +132,14 @@ int main() {
   delay(1);
   wiringPiI2CWriteReg8(fd, PWM_MODE1, 0x80);
 
+  int ms, ls, rs;
+  int read;
+
   //コースに置いたらスタート
   while(1){
     if(digitalRead(GPIO_L) == LOW && digitalRead(GPIO_R) == LOW) break;
   }
 
-  int ms, ls, rs;
-  int read;
   while (1) {
     ms = 0;
     ls = 0;
@@ -147,26 +148,54 @@ int main() {
     read = 0b00000;
     
     if (digitalRead(GPIO_L) == HIGH){
+      printf("L,");
       read += 0b10000;
-      printf("%d\n",read);
     }
     if (digitalRead(GPIO_ML) == HIGH){
+      printf("ML,");
       read += 0b01000;
     }
     if (digitalRead(GPIO_M) == HIGH){
+      printf("M,");
       read += 0b00100;
     }
     if (digitalRead(GPIO_MR) == HIGH){
+      printf("MR,");
       read += 0b00010;
     }
     if (digitalRead(GPIO_R) == HIGH){
+      printf("R,");
       read += 0b00001;
     }
+    printf("\n");
 
-    printf("%d\n",read);
     
+    /*モーター駆動*/
+    //L
+    if(read==0b10000){
+      rs=8;
+    }
+    //ML
+    else if(read==0b01000){
+      ms=5; rs=3;
+    }
+    //M
+    else if(read==0b00100){
+      ms=8;
+    }
+    //MR
+    else if(read==0b00010){
+      ms=5; ls=3;
+    }
+    //R
+    else if(read==0b00001){
+      ls=8;
+    }
+    else if(read==0b00000){
+      ms=8;
+    }
     motor_drive(fd, ms+ls, ms+rs);
-    delay(50);
+    delay(100);
   }
   return 0;
 }
