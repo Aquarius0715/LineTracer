@@ -133,13 +133,9 @@ int main() {
       printf("right\n");
       rs = 7;
     }
-    else {
-      printf("not_read\n");
-      ls = 8;
-    }
     if (digitalRead(GPIO_ML) == HIGH) {
       printf("middle right\n");
-      rs = 4; ms = 3;
+      rs = 4; ms=3;
     }
     if (digitalRead(GPIO_M) == HIGH) {
       printf("middle\n");
@@ -147,11 +143,15 @@ int main() {
     }
     if (digitalRead(GPIO_MR) == HIGH) {
       printf("middle left\n");
-      ls = 4; ms = 3;
+      ls = 4; ms=3;
     }
     if (digitalRead(GPIO_R) == HIGH) {
       printf("left\n");
       ls = 7;
+    }
+    else {
+      printf("not_read\n");
+      rs=8;
     }
     motor_drive(fd, ms+ls, ms+rs);
     delay(50);

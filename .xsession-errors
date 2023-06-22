@@ -1,4 +1,4 @@
-Xsession: X session started for raspi4-01 at 2023年  6月 22日 木曜日 10:51:33 JST
+Xsession: X session started for raspi4-01 at 2023年  6月 22日 木曜日 11:22:34 JST
 WARNING: tempfile is deprecated; consider using mktemp instead.
 dbus-update-activation-environment: setting DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
 dbus-update-activation-environment: setting DISPLAY=:0
@@ -28,7 +28,7 @@ dbus-update-activation-environment: setting NO_AT_BRIDGE=1
 dbus-update-activation-environment: setting GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
 dbus-update-activation-environment: setting LC_ALL=ja_JP.UTF-8
 dbus-update-activation-environment: setting PWD=/home/raspi4-01
-** Message: 10:51:40.087: main.vala:103: Session is LXDE-pi
-** Message: 10:51:40.088: main.vala:104: DE is LXDE
-** Message: 10:51:40.399: main.vala:135: log directory: /home/raspi4-01/.cache/lxsession/LXDE-pi
-** Message: 10:51:40.399: main.vala:136: log path: /home/raspi4-01/.cache/lxsession/LXDE-pi/run.log
+** Message: 11:22:42.541: main.vala:103: Session is LXDE-pi
+** Message: 11:22:42.541: main.vala:104: DE is LXDE
+** Message: 11:22:42.883: main.vala:135: log directory: /home/raspi4-01/.cache/lxsession/LXDE-pi
+** Message: 11:22:42.883: main.vala:136: log path: /home/raspi4-01/.cache/lxsession/LXDE-pi/run.log

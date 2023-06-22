@@ -4,6 +4,13 @@
 #include <wiringPiI2C.h>
 #include <limits.h>
 
+
+#define HS 10
+#define MS 7
+#define LS 3
+
+
+
 // PWMユニットのI2Cアドレス
 #define PWMI2CADR 0x40
 
@@ -179,38 +186,42 @@ int main() {
     /*モーター駆動*/
     //L
     if(read==0b10000){
-      rs=8;
+      rs=HS;
     }
     //ML
     else if(read==0b01000 || read==0b11000){
-      ms=5; rs=3;
+      ms=MS; rs=LS;
     }
     //M
     else if(read==0b00100 || read==0b01100 || read==0b00110){
-      ms=8;
+      ms=HS;
     }
     //MR
     else if(read==0b00010 || read==0b00011){
-      ms=5; ls=3;
+      ms=MS; ls=LS;
     }
     //R
     else if(read==0b00001){
-      ls=8;
+      ls=HS;
     }
     else if(read==0b00000 && all_ct%2==0){
-      ls=8;
+      ls=HS;
       all_ct++;
     }
     else if(read==0b00000 && all_ct%2==1){
-      rs=8;
+      rs=HS;
       all_ct++;
     }
-    else(all_ct>10){
-	break;
+    else if(read==0b11111){
+      ls=-HS;
+      rs=HS;
+      while(1){
+	motor_drive(fd,ms+ls, ms+rs);
+      }
     }
 
     motor_drive(fd, ms+ls, ms+rs);
-    delay(100);
+    delay(50);
   }
   return 0;
 }
