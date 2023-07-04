@@ -5,9 +5,10 @@
 #include <limits.h>
 
 
-#define HS 10
-#define MS 7
-#define LS 3
+#define HS 16
+#define MS 10
+#define LS 5
+#define DL 100
 
 
 
@@ -177,12 +178,6 @@ int main() {
   // int all_ct=0;
   int not_ct=0;
 
-  while(1){
-    motor_drive(fd, HS, -HS);
-    if(digitalRead(GPIO_L) == LOW && digitalRead(GPIO_R) == LOW) break;
-    delay(1000);
-  }
-  
 //０.コースに置いたらスタート
   while(1){
     if(digitalRead(GPIO_L) == LOW && digitalRead(GPIO_R) == LOW) break;
@@ -221,10 +216,10 @@ int main() {
     else if(read==0b00000){
       while(read==0b00000){
         if(not_ct==0){
-          ls=MS;
+          ls=HS;
         }
         if(not_ct==1){
-          rs=MS;
+          rs=HS;
         }
         not_ct++;
         motor_drive(fd, ls, rs);
@@ -233,10 +228,10 @@ int main() {
     }
     
     motor_drive(fd, ms+ls, ms+rs);
-    delay(100);
+    delay(DL);
   }
   motor_drive(fd, HS, HS);
-  delay(100);
+  delay(DL);
   printf("交差点ついたよ\n");
   motor_reset(fd);
 
@@ -244,10 +239,11 @@ int main() {
   while(read==0b00100 || read==0b01100 || read==0b00110){
 
     motor_drive(fd,-HS,HS);
-    delay(100);
+    delay(DL);
   }
   motor_reset(fd);
 
 //３．バック
+
   return 0;
 }

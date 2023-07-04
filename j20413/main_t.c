@@ -2,6 +2,15 @@
 #include <stdlib.h>
 #include <wiringPi.h>
 #include <wiringPiI2C.h>
+#include <limits.h>
+
+
+#define HS 16
+#define MS 10
+#define LS 5
+#define DL 50
+
+
 
 // PWMユニットのI2Cアドレス
 #define PWMI2CADR 0x40
@@ -93,7 +102,7 @@ int motor_drive(int fd, int lm, int rm) {
   // 左モーターの制御
   if (lm < 0) {
     set_pwm_output(fd, IN3_PWM, 0); // OUT3 -> GND
-    set_pwm_output(fd, IN4_PWM, 16); // OUT -> +Vs
+    set_pwm_output(fd, IN4_PWM, 16); // OUT4 -> +Vs
     lm = abs(lm);
   } else {
     set_pwm_output(fd, IN3_PWM, 16); // OUT3 -> +Vs
@@ -105,6 +114,50 @@ int motor_drive(int fd, int lm, int rm) {
   set_pwm_output(fd, ENB_PWM, lm); // 左モータースタート
   return 0;
 }
+
+int motor_reset(int fd){
+  motor_drive(fd, 0, 0);
+  return 0;
+}
+
+void printb(unsigned int v) {
+  unsigned int mask = (int)1 << (sizeof(v) * CHAR_BIT - 1);
+  do putchar(mask & v ? '1' : '0');
+  while (mask >>= 1);
+}
+
+void putb(unsigned int v) {
+  putchar('0'), putchar('b'), printb(v), putchar('\n');
+}
+
+int sensor(){
+  int read = 0b00000;
+
+    if (digitalRead(GPIO_L) == HIGH){
+      printf("L,");
+      read += 0b10000;
+    }
+    if (digitalRead(GPIO_ML) == HIGH){
+      printf("ML,");
+      read += 0b01000;
+    }
+    if (digitalRead(GPIO_M) == HIGH){
+      printf("M,");
+      read += 0b00100;
+    }
+    if (digitalRead(GPIO_MR) == HIGH){
+      printf("MR,");
+      read += 0b00010;
+    }
+    if (digitalRead(GPIO_R) == HIGH){
+      printf("R,");
+      read += 0b00001;
+    }
+    printf("\n");
+
+    return read;
+}
+
 
 int main() {
   int fd;
@@ -120,41 +173,77 @@ int main() {
   delay(1);
   wiringPiI2CWriteReg8(fd, PWM_MODE1, 0x80);
 
+  int ms, ls, rs;
+  int read;
+  // int all_ct=0;
+  int not_ct=0;
+
+//０.コースに置いたらスタート
   while(1){
     if(digitalRead(GPIO_L) == LOW && digitalRead(GPIO_R) == LOW) break;
   }
-
-  int ms, ls, rs;
-  while (1) {
+   
+//１．交差点に着くまで
+  while (read!=0b11111) {
     ms = 0;
     ls = 0;
     rs = 0;
-    if (digitalRead(GPIO_L) == HIGH) {
-      printf("right\n");
-      rs = 10;
+
+    read = sensor();
+    
+    /*モーター駆動*/
+    //L
+    if(read==0b10000){
+      rs=HS;
     }
-    if (digitalRead(GPIO_ML) == HIGH) {
-      printf("middle right\n");
-      rs = 6; ms=4;
+    //ML
+    else if(read==0b01000 || read==0b11000){
+      ls=MS; rs=HS;
     }
-    if (digitalRead(GPIO_M) == HIGH) {
-      printf("middle\n");
-      ms = 12;
+    //M
+    else if(read==0b00100 || read==0b01100 || read==0b00110){
+      ms=HS;
     }
-    if (digitalRead(GPIO_MR) == HIGH) {
-      printf("middle left\n");
-      ls = 6; ms=4;
+    //MR
+    else if(read==0b00010 || read==0b00011){
+      ls=HS; rs=MS;
     }
-    if (digitalRead(GPIO_R) == HIGH) {
-      printf("left\n");
-      ls = 10;
+    //R
+    else if(read==0b00001){
+      ls=HS;
     }
-    else {
-      printf("not_read\n");
-      rs=10;
+    //例外処理（センサがうまく読み取れなかったとき）
+    else if(read==0b00000){
+      while(read==0b00000){
+        if(not_ct==0){
+          ls=MS;
+        }
+        if(not_ct==1){
+          rs=MS;
+        }
+        not_ct++;
+        motor_drive(fd, ls, rs);
+        delay(50);
+      }
     }
+    
     motor_drive(fd, ms+ls, ms+rs);
-    delay(50);
+    delay(DL);
   }
+  motor_drive(fd, HS, HS);
+  delay(DL);
+  printf("交差点ついたよ\n");
+  motor_reset(fd);
+
+//２．90度左回転
+  while(read==0b00100 || read==0b01100 || read==0b00110){
+
+    motor_drive(fd,-HS,HS);
+    delay(DL);
+  }
+  motor_reset(fd);
+
+//３．バック
+
   return 0;
 }

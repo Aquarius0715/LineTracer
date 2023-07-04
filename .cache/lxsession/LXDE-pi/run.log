@@ -151,3 +151,65 @@ E: Release file for http://raspbian.raspberrypi.org/raspbian/dists/bullseye/InRe
   GLib.source_remove (self.timer)
 /usr/share/system-config-printer/applet.py:364: Warning: Source ID 19 was not found when attempting to remove it
   GLib.source_remove (self.timer)
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 25 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 15:16:45.506: eth0: Link is down
+** Message: 15:16:45.507: Status changed to disconnected
+** Message: 15:17:37.477: eth0: Link is up, configuring
+** Message: 15:17:37.478: Status changed to connecting
+** Message: 15:17:42.994: eth0: Configured 172.22.5.201/16
+** Message: 15:17:42.995: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 27 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 33 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 15:18:53.479: eth0: Link is down
+** Message: 15:18:53.480: Status changed to disconnected
+** Message: 15:19:18.894: eth0: Link is up, configuring
+** Message: 15:19:18.894: Status changed to connecting
+** Message: 15:19:24.365: eth0: Configured 172.22.5.201/16
+** Message: 15:19:24.365: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 35 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 15:24:29.300: eth0: Link is down
+** Message: 15:24:29.301: Status changed to disconnected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 41 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 15:25:09.114: eth0: Link is up, configuring
+** Message: 15:25:09.114: Status changed to connecting
+** Message: 15:25:14.647: eth0: Configured 172.22.5.201/16
+** Message: 15:25:14.647: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 43 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 49 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 15:26:12.713: eth0: Link is down
+** Message: 15:26:12.714: Status changed to disconnected
+** Message: 15:27:07.894: eth0: Link is up, configuring
+** Message: 15:27:07.894: Status changed to connecting
+** Message: 15:27:12.951: eth0: Configured 172.22.5.201/16
+** Message: 15:27:12.952: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 51 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 57 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 15:30:11.396: eth0: Link is down
+** Message: 15:30:11.397: Status changed to disconnected
+** Message: 15:30:39.894: eth0: Link is up, configuring
+** Message: 15:30:39.894: Status changed to connecting
+** Message: 15:30:45.465: eth0: Configured 172.22.5.201/16
+** Message: 15:30:45.466: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 59 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 65 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 69 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 15:32:21.409: eth0: Link is down
+** Message: 15:32:21.410: Status changed to disconnected
+** Message: 15:33:17.564: eth0: Link is up, configuring
+** Message: 15:33:17.564: Status changed to connecting
+** Message: 15:33:22.337: eth0: Configured 172.22.5.201/16
+** Message: 15:33:22.338: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 71 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
