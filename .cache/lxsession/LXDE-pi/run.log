@@ -1,164 +1,153 @@
-** Message: 11:22:42.892: environement.vala:58: Exporting primary_variable
-** Message: 11:22:42.892: environement.vala:59: desktop_environnement XDG_CURRENT_DESKTOP
-** Message: 11:22:42.892: environement.vala:150: confir_dirs is null, export : /etc/xdg
-** Message: 11:22:42.892: environement.vala:184: Exporting XDG_CONFIG_DIRS
-** Message: 11:22:42.893: environement.vala:218: custom_data :
-** Message: 11:22:42.893: environement.vala:219: data_dirs :/usr/share/fkms:/usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
-** Message: 11:22:42.893: environement.vala:220: data_dirs not null, export : /usr/share/fkms:/usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
-** Message: 11:22:42.893: environement.vala:225: Exporting XDG_DATA_DIRS
-** Message: 11:22:42.893: utils.vala:138: Config system location : /etc/xdg/lxsession/LXDE-pi
-** Message: 11:22:42.898: utils.vala:144: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
-** Message: 11:22:42.898: utils.vala:148: Final file used : /etc/xdg/lxsession/LXDE-pi/desktop.conf
-** Message: 11:22:42.899: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
-** Message: 11:22:42.899: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+** Message: 12:17:19.162: environement.vala:58: Exporting primary_variable
+** Message: 12:17:19.162: environement.vala:59: desktop_environnement XDG_CURRENT_DESKTOP
+** Message: 12:17:19.162: environement.vala:150: confir_dirs is null, export : /etc/xdg
+** Message: 12:17:19.162: environement.vala:184: Exporting XDG_CONFIG_DIRS
+** Message: 12:17:19.162: environement.vala:218: custom_data :
+** Message: 12:17:19.162: environement.vala:219: data_dirs :/usr/share/fkms:/usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
+** Message: 12:17:19.163: environement.vala:220: data_dirs not null, export : /usr/share/fkms:/usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
+** Message: 12:17:19.163: environement.vala:225: Exporting XDG_DATA_DIRS
+** Message: 12:17:19.163: utils.vala:138: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: 12:17:19.164: utils.vala:144: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+** Message: 12:17:19.164: utils.vala:148: Final file used : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+** Message: 12:17:19.165: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: 12:17:19.165: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
 
-** (lxsession:884): WARNING **: 11:22:42.902: utils.vala:70: そのようなファイルやディレクトリはありません
-** Message: 11:22:42.903: settings.vala:540: キーファイルにグループ“GTK”のキー“iGtk/ColorScheme”がありません
-** Message: 11:22:42.903: settings.vala:540: キーファイルにグループ“Session”のキー“windows_manager/command”がありません
-** Message: 11:22:42.903: settings.vala:540: キーファイルにグループ“Session”のキー“panel/command”がありません
-** Message: 11:22:42.903: settings.vala:540: キーファイルにグループ“Session”のキー“dock/command”がありません
-** Message: 11:22:42.903: settings.vala:540: キーファイルにグループ“Session”のキー“file_manager/command”がありません
-** Message: 11:22:42.903: settings.vala:540: キーファイルにグループ“Session”のキー“desktop_manager/command”がありません
-** Message: 11:22:42.903: settings.vala:540: キーファイルにグループ“Session”のキー“launcher_manager/autostart”がありません
-** Message: 11:22:42.903: settings.vala:540: キーファイルにグループ“Session”のキー“composite_manager/command”がありません
-** Message: 11:22:42.903: settings.vala:540: キーファイルにグループ“Session”のキー“im1/command”がありません
-** Message: 11:22:42.903: settings.vala:540: キーファイルにグループ“Session”のキー“im2/command”がありません
-** Message: 11:22:42.903: settings.vala:540: キーファイルにグループ“Session”のキー“widget1/command”がありません
-** Message: 11:22:42.903: settings.vala:540: キーファイルにグループ“Session”のキー“notification/command”がありません
-** Message: 11:22:42.903: settings.vala:540: キーファイルにグループ“Session”のキー“keybindings/command”がありません
-** Message: 11:22:42.903: settings.vala:540: キーファイルにグループ“Session”のキー“im_manager/command”がありません
-** Message: 11:22:42.903: settings.vala:540: キーファイルにグループ“Session”のキー“screensaver/command”がありません
-** Message: 11:22:42.903: settings.vala:540: キーファイルにグループ“Session”のキー“power_manager/command”がありません
-** Message: 11:22:42.904: settings.vala:540: キーファイルにグループ“Session”のキー“audio_manager/command”がありません
-** Message: 11:22:42.904: settings.vala:540: キーファイルにグループ“Session”のキー“workspace_manager/command”がありません
-** Message: 11:22:42.904: settings.vala:540: キーファイルにグループ“Session”のキー“screenshot_manager/command”がありません
-** Message: 11:22:42.904: settings.vala:540: キーファイルにグループ“Session”のキー“message_manager/command”がありません
-** Message: 11:22:42.904: settings.vala:540: キーファイルにグループ“Session”のキー“upgrade_manager/command”がありません
-** Message: 11:22:42.904: settings.vala:540: キーファイルにグループ“Session”のキー“updates_manager/command”がありません
-** Message: 11:22:42.904: settings.vala:540: キーファイルにグループ“Session”のキー“updates_manager/timeout”がありません
-** Message: 11:22:42.904: settings.vala:540: キーファイルにグループ“Session”のキー“crash_manager/command”がありません
-** Message: 11:22:42.904: settings.vala:540: キーファイルにグループ“Session”のキー“crash_manager/dev_mode”がありません
-** Message: 11:22:42.904: settings.vala:540: キーファイルにグループ“Session”のキー“crash_manager/timeout”がありません
-** Message: 11:22:42.904: settings.vala:540: キーファイルにグループ“Session”のキー“upstart_user_session”がありません
-** Message: 11:22:42.904: settings.vala:540: キーファイルにグループ“Session”のキー“proxy_manager/http”がありません
-** Message: 11:22:42.904: settings.vala:540: キーファイルにグループ“Session”のキー“a11y/command”がありません
-** Message: 11:22:42.905: settings.vala:540: キーファイルにグループ“Session”のキー“xrandr/command”がありません
-** Message: 11:22:42.905: settings.vala:540: キーファイルにグループ“Session”のキー“network_gui/command”がありません
-** Message: 11:22:42.905: settings.vala:540: キーファイルにグループ“Session”のキー“webbrowser/command”がありません
-** Message: 11:22:42.905: settings.vala:540: キーファイルにグループ“Session”のキー“email/command”がありません
-** Message: 11:22:42.905: settings.vala:540: キーファイルにグループ“Session”のキー“pdf_reader/command”がありません
-** Message: 11:22:42.905: settings.vala:540: キーファイルにグループ“Session”のキー“video_player/command”がありません
-** Message: 11:22:42.905: settings.vala:540: キーファイルにグループ“Session”のキー“audio_player/command”がありません
-** Message: 11:22:42.905: settings.vala:540: キーファイルにグループ“Session”のキー“image_display/command”がありません
-** Message: 11:22:42.905: settings.vala:540: キーファイルにグループ“Session”のキー“text_editor/command”がありません
-** Message: 11:22:42.905: settings.vala:540: キーファイルにグループ“Session”のキー“archive/command”がありません
-** Message: 11:22:42.905: settings.vala:540: キーファイルにグループ“Session”のキー“charmap/command”がありません
-** Message: 11:22:42.905: settings.vala:540: キーファイルにグループ“Session”のキー“calculator/command”がありません
-** Message: 11:22:42.905: settings.vala:540: キーファイルにグループ“Session”のキー“spreadsheet/command”がありません
-** Message: 11:22:42.905: settings.vala:540: キーファイルにグループ“Session”のキー“bittorent/command”がありません
-** Message: 11:22:42.905: settings.vala:540: キーファイルにグループ“Session”のキー“document/command”がありません
-** Message: 11:22:42.905: settings.vala:540: キーファイルにグループ“Session”のキー“webcam/command”がありません
-** Message: 11:22:42.906: settings.vala:540: キーファイルにグループ“Session”のキー“burn/command”がありません
-** Message: 11:22:42.906: settings.vala:540: キーファイルにグループ“Session”のキー“notes/command”がありません
-** Message: 11:22:42.906: settings.vala:540: キーファイルにグループ“Session”のキー“disk_utility/command”がありません
-** Message: 11:22:42.906: settings.vala:540: キーファイルにグループ“Session”のキー“tasks/command”がありません
-** Message: 11:22:42.906: settings.vala:540: キーファイルにグループ“Keymap”がありません
-** Message: 11:22:42.906: settings.vala:540: キーファイルにグループ“State”のキー“laptop_mode”がありません
-** Message: 11:22:42.906: settings.vala:540: キーファイルにグループ“Dbus”のキー“gnome”がありません
-** Message: 11:22:42.906: settings.vala:540: キーファイルにグループ“Environment”のキー“type”がありません
-** Message: 11:22:42.906: settings.vala:540: キーファイルにグループ“Environment”のキー“ubuntu_menuproxy”がありません
-** Message: 11:22:42.906: settings.vala:540: キーファイルにグループ“Environment”のキー“toolkit_integration”がありません
-** Message: 11:22:42.906: settings.vala:540: キーファイルにグループ“Environment”のキー“gtk/overlay_scrollbar_disable”がありません
-** Message: 11:22:42.906: settings.vala:540: キーファイルにグループ“Environment”のキー“qt/force_theme”がありません
-** Message: 11:22:42.906: settings.vala:540: キーファイルにグループ“Environment”のキー“qt/platform”がありません
-** Message: 11:22:42.907: settings.vala:462: Monitoring: /etc/xdg/lxsession/LXDE-pi/desktop.conf
-** Message: 11:22:42.907: settings.vala:470: Desktop file is not in config home, monitoring creation of it
-** Message: 11:22:42.908: settings.vala:485: Monitoring home path: /home/raspi4-01/.config/lxsession/LXDE-pi/desktop.conf
-** Message: 11:22:42.908: environement.vala:79: Exporting variable
-** Message: 11:22:42.908: environement.vala:80: desktop_environnement XDG_CURRENT_DESKTOP
-** Message: 11:22:42.908: environement.vala:177: custom_config :
-** Message: 11:22:42.908: environement.vala:178: config_dirs :/etc/xdg
-** Message: 11:22:42.908: environement.vala:179: confir_dirs not null, export : /etc/xdg
-** Message: 11:22:42.908: environement.vala:184: Exporting XDG_CONFIG_DIRS
-** Message: 11:22:42.908: environement.vala:218: custom_data :
-** Message: 11:22:42.908: environement.vala:219: data_dirs :/usr/share/fkms:/usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
-** Message: 11:22:42.908: environement.vala:220: data_dirs not null, export : /usr/share/fkms:/usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
-** Message: 11:22:42.908: environement.vala:225: Exporting XDG_DATA_DIRS
-** Message: 11:22:42.908: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
-** Message: 11:22:42.908: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+** (lxsession:948): WARNING **: 12:17:19.167: utils.vala:70: そのようなファイルやディレクトリはありません
+** Message: 12:17:19.167: settings.vala:540: キーファイルにグループ“GTK”のキー“iGtk/ColorScheme”がありません
+** Message: 12:17:19.167: settings.vala:540: キーファイルにグループ“Session”のキー“windows_manager/command”がありません
+** Message: 12:17:19.167: settings.vala:540: キーファイルにグループ“Session”のキー“panel/command”がありません
+** Message: 12:17:19.167: settings.vala:540: キーファイルにグループ“Session”のキー“dock/command”がありません
+** Message: 12:17:19.167: settings.vala:540: キーファイルにグループ“Session”のキー“file_manager/command”がありません
+** Message: 12:17:19.167: settings.vala:540: キーファイルにグループ“Session”のキー“desktop_manager/command”がありません
+** Message: 12:17:19.167: settings.vala:540: キーファイルにグループ“Session”のキー“launcher_manager/autostart”がありません
+** Message: 12:17:19.168: settings.vala:540: キーファイルにグループ“Session”のキー“composite_manager/command”がありません
+** Message: 12:17:19.168: settings.vala:540: キーファイルにグループ“Session”のキー“im1/command”がありません
+** Message: 12:17:19.168: settings.vala:540: キーファイルにグループ“Session”のキー“im2/command”がありません
+** Message: 12:17:19.168: settings.vala:540: キーファイルにグループ“Session”のキー“widget1/command”がありません
+** Message: 12:17:19.168: settings.vala:540: キーファイルにグループ“Session”のキー“notification/command”がありません
+** Message: 12:17:19.168: settings.vala:540: キーファイルにグループ“Session”のキー“keybindings/command”がありません
+** Message: 12:17:19.168: settings.vala:540: キーファイルにグループ“Session”のキー“im_manager/command”がありません
+** Message: 12:17:19.168: settings.vala:540: キーファイルにグループ“Session”のキー“screensaver/command”がありません
+** Message: 12:17:19.168: settings.vala:540: キーファイルにグループ“Session”のキー“power_manager/command”がありません
+** Message: 12:17:19.168: settings.vala:540: キーファイルにグループ“Session”のキー“audio_manager/command”がありません
+** Message: 12:17:19.169: settings.vala:540: キーファイルにグループ“Session”のキー“workspace_manager/command”がありません
+** Message: 12:17:19.169: settings.vala:540: キーファイルにグループ“Session”のキー“screenshot_manager/command”がありません
+** Message: 12:17:19.169: settings.vala:540: キーファイルにグループ“Session”のキー“message_manager/command”がありません
+** Message: 12:17:19.169: settings.vala:540: キーファイルにグループ“Session”のキー“upgrade_manager/command”がありません
+** Message: 12:17:19.169: settings.vala:540: キーファイルにグループ“Session”のキー“updates_manager/command”がありません
+** Message: 12:17:19.169: settings.vala:540: キーファイルにグループ“Session”のキー“updates_manager/timeout”がありません
+** Message: 12:17:19.169: settings.vala:540: キーファイルにグループ“Session”のキー“crash_manager/command”がありません
+** Message: 12:17:19.169: settings.vala:540: キーファイルにグループ“Session”のキー“crash_manager/dev_mode”がありません
+** Message: 12:17:19.169: settings.vala:540: キーファイルにグループ“Session”のキー“crash_manager/timeout”がありません
+** Message: 12:17:19.170: settings.vala:540: キーファイルにグループ“Session”のキー“upstart_user_session”がありません
+** Message: 12:17:19.170: settings.vala:540: キーファイルにグループ“Session”のキー“proxy_manager/http”がありません
+** Message: 12:17:19.170: settings.vala:540: キーファイルにグループ“Session”のキー“a11y/command”がありません
+** Message: 12:17:19.170: settings.vala:540: キーファイルにグループ“Session”のキー“xrandr/command”がありません
+** Message: 12:17:19.170: settings.vala:540: キーファイルにグループ“Session”のキー“network_gui/command”がありません
+** Message: 12:17:19.170: settings.vala:540: キーファイルにグループ“Session”のキー“webbrowser/command”がありません
+** Message: 12:17:19.170: settings.vala:540: キーファイルにグループ“Session”のキー“email/command”がありません
+** Message: 12:17:19.170: settings.vala:540: キーファイルにグループ“Session”のキー“pdf_reader/command”がありません
+** Message: 12:17:19.171: settings.vala:540: キーファイルにグループ“Session”のキー“video_player/command”がありません
+** Message: 12:17:19.171: settings.vala:540: キーファイルにグループ“Session”のキー“audio_player/command”がありません
+** Message: 12:17:19.171: settings.vala:540: キーファイルにグループ“Session”のキー“image_display/command”がありません
+** Message: 12:17:19.171: settings.vala:540: キーファイルにグループ“Session”のキー“text_editor/command”がありません
+** Message: 12:17:19.171: settings.vala:540: キーファイルにグループ“Session”のキー“archive/command”がありません
+** Message: 12:17:19.171: settings.vala:540: キーファイルにグループ“Session”のキー“charmap/command”がありません
+** Message: 12:17:19.171: settings.vala:540: キーファイルにグループ“Session”のキー“calculator/command”がありません
+** Message: 12:17:19.171: settings.vala:540: キーファイルにグループ“Session”のキー“spreadsheet/command”がありません
+** Message: 12:17:19.171: settings.vala:540: キーファイルにグループ“Session”のキー“bittorent/command”がありません
+** Message: 12:17:19.171: settings.vala:540: キーファイルにグループ“Session”のキー“document/command”がありません
+** Message: 12:17:19.172: settings.vala:540: キーファイルにグループ“Session”のキー“webcam/command”がありません
+** Message: 12:17:19.172: settings.vala:540: キーファイルにグループ“Session”のキー“burn/command”がありません
+** Message: 12:17:19.172: settings.vala:540: キーファイルにグループ“Session”のキー“notes/command”がありません
+** Message: 12:17:19.172: settings.vala:540: キーファイルにグループ“Session”のキー“disk_utility/command”がありません
+** Message: 12:17:19.172: settings.vala:540: キーファイルにグループ“Session”のキー“tasks/command”がありません
+** Message: 12:17:19.172: settings.vala:540: キーファイルにグループ“Keymap”がありません
+** Message: 12:17:19.172: settings.vala:540: キーファイルにグループ“State”のキー“laptop_mode”がありません
+** Message: 12:17:19.172: settings.vala:540: キーファイルにグループ“Dbus”のキー“gnome”がありません
+** Message: 12:17:19.172: settings.vala:540: キーファイルにグループ“Environment”のキー“type”がありません
+** Message: 12:17:19.172: settings.vala:540: キーファイルにグループ“Environment”のキー“ubuntu_menuproxy”がありません
+** Message: 12:17:19.173: settings.vala:540: キーファイルにグループ“Environment”のキー“toolkit_integration”がありません
+** Message: 12:17:19.173: settings.vala:540: キーファイルにグループ“Environment”のキー“gtk/overlay_scrollbar_disable”がありません
+** Message: 12:17:19.173: settings.vala:540: キーファイルにグループ“Environment”のキー“qt/force_theme”がありません
+** Message: 12:17:19.173: settings.vala:540: キーファイルにグループ“Environment”のキー“qt/platform”がありません
+** Message: 12:17:19.174: settings.vala:462: Monitoring: /etc/xdg/lxsession/LXDE-pi/desktop.conf
+** Message: 12:17:19.174: settings.vala:470: Desktop file is not in config home, monitoring creation of it
+** Message: 12:17:19.174: settings.vala:485: Monitoring home path: /home/raspi4-01/.config/lxsession/LXDE-pi/desktop.conf
+** Message: 12:17:19.175: environement.vala:79: Exporting variable
+** Message: 12:17:19.175: environement.vala:80: desktop_environnement XDG_CURRENT_DESKTOP
+** Message: 12:17:19.175: environement.vala:177: custom_config :
+** Message: 12:17:19.175: environement.vala:178: config_dirs :/etc/xdg
+** Message: 12:17:19.175: environement.vala:179: confir_dirs not null, export : /etc/xdg
+** Message: 12:17:19.175: environement.vala:184: Exporting XDG_CONFIG_DIRS
+** Message: 12:17:19.175: environement.vala:218: custom_data :
+** Message: 12:17:19.175: environement.vala:219: data_dirs :/usr/share/fkms:/usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
+** Message: 12:17:19.175: environement.vala:220: data_dirs not null, export : /usr/share/fkms:/usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
+** Message: 12:17:19.175: environement.vala:225: Exporting XDG_DATA_DIRS
+** Message: 12:17:19.175: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: 12:17:19.175: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
 
-** (lxsession:884): WARNING **: 11:22:42.909: utils.vala:70: そのようなファイルやディレクトリはありません
-** Message: 11:22:42.909: environement.vala:254: No entry in [Environment_variable]. キーファイルにグループ“Environment_variable”がありません
+** (lxsession:948): WARNING **: 12:17:19.176: utils.vala:70: そのようなファイルやディレクトリはありません
+** Message: 12:17:19.176: environement.vala:254: No entry in [Environment_variable]. キーファイルにグループ“Environment_variable”がありません
 
-** (lxsession:884): WARNING **: 11:22:42.912: process.vala:49: 子プロセス“xprop”の起動に失敗しました (そのようなファイルやディレクトリはありません)
+** (lxsession:948): WARNING **: 12:17:19.181: process.vala:49: 子プロセス“xprop”の起動に失敗しました (そのようなファイルやディレクトリはありません)
 
-** (lxsession:884): WARNING **: 11:22:42.912: process.vala:50: Error when launching xprop
-** Message: 11:22:42.913: utils.vala:138: Config system location : /etc/xdg/lxsession/LXDE-pi
-** Message: 11:22:42.913: utils.vala:144: System system path location : /etc/xdg/lxsession/LXDE-pi/conffiles.conf
-** Message: 11:22:42.913: utils.vala:148: Final file used : /etc/xdg/lxsession/LXDE-pi/conffiles.conf
-** Message: 11:22:42.913: options.vala:164: Activate xsettings_manager build-in
-** Message: 11:22:42.913: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
-** Message: 11:22:42.913: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+** (lxsession:948): WARNING **: 12:17:19.182: process.vala:50: Error when launching xprop
+** Message: 12:17:19.182: utils.vala:138: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: 12:17:19.182: utils.vala:144: System system path location : /etc/xdg/lxsession/LXDE-pi/conffiles.conf
+** Message: 12:17:19.182: utils.vala:148: Final file used : /etc/xdg/lxsession/LXDE-pi/conffiles.conf
+** Message: 12:17:19.182: options.vala:164: Activate xsettings_manager build-in
+** Message: 12:17:19.182: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: 12:17:19.182: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
 
-** (lxsession:884): WARNING **: 11:22:42.913: utils.vala:70: そのようなファイルやディレクトリはありません
-** Message: 11:22:42.935: app.vala:728: polkit separate
-** Message: 11:22:42.935: app.vala:728: polkit separate
-** Message: 11:22:42.943: app.vala:76: Launching lxpolkit 
-** Message: 11:22:42.944: utils.vala:138: Config system location : /etc/xdg/lxsession/LXDE-pi
-** Message: 11:22:42.944: utils.vala:144: System system path location : /etc/xdg/lxsession/LXDE-pi/autostart
-** Message: 11:22:42.944: utils.vala:148: Final file used : /etc/xdg/lxsession/LXDE-pi/autostart
-** Message: 11:22:42.944: autostart.vala:42: Autostart path : /etc/xdg/lxsession/LXDE-pi/autostart
-** Message: 11:22:42.965: app.vala:76: Launching lxpanel 
-** Message: 11:22:42.983: app.vala:76: Launching pcmanfm 
+** (lxsession:948): WARNING **: 12:17:19.183: utils.vala:70: そのようなファイルやディレクトリはありません
+** Message: 12:17:19.205: app.vala:728: polkit separate
+** Message: 12:17:19.205: app.vala:728: polkit separate
+** Message: 12:17:19.219: app.vala:76: Launching lxpolkit 
+** Message: 12:17:19.220: utils.vala:138: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: 12:17:19.220: utils.vala:144: System system path location : /etc/xdg/lxsession/LXDE-pi/autostart
+** Message: 12:17:19.220: utils.vala:148: Final file used : /etc/xdg/lxsession/LXDE-pi/autostart
+** Message: 12:17:19.220: autostart.vala:42: Autostart path : /etc/xdg/lxsession/LXDE-pi/autostart
+** Message: 12:17:19.239: app.vala:76: Launching lxpanel 
+** Message: 12:17:19.257: app.vala:76: Launching pcmanfm 
 
-** (lxsession:884): WARNING **: 11:22:42.988: app.vala:86: 子プロセス“xscreensaver”の起動に失敗しました (そのようなファイルやディレクトリはありません)
+** (lxsession:948): WARNING **: 12:17:19.262: app.vala:86: 子プロセス“xscreensaver”の起動に失敗しました (そのようなファイルやディレクトリはありません)
 
-** (lxsession:884): WARNING **: 11:22:42.988: app.vala:87: Error when launching xscreensaver
-** Message: 11:22:43.000: options.vala:107: Create build-in Clipboard
-** Message: 11:22:43.002: main.vala:450: Check keymap_mode (null)
-** Message: 11:22:43.006: app.vala:76: Launching /usr/bin/ssh-agent 
-SSH_AUTH_SOCK=/tmp/ssh-VhbN4G1KkcAy/agent.1136; export SSH_AUTH_SOCK;
-SSH_AGENT_PID=1147; export SSH_AGENT_PID;
-echo Agent pid 1147;
-** Message: 11:22:43.593: app.vala:130: /usr/bin/ssh-agent exit with this type of exit: 0
+** (lxsession:948): WARNING **: 12:17:19.262: app.vala:87: Error when launching xscreensaver
+** Message: 12:17:19.276: options.vala:107: Create build-in Clipboard
+** Message: 12:17:19.278: main.vala:450: Check keymap_mode (null)
+** Message: 12:17:19.282: app.vala:76: Launching /usr/bin/ssh-agent 
+SSH_AUTH_SOCK=/tmp/ssh-4F5zTX5vb0yK/agent.1133; export SSH_AUTH_SOCK;
+SSH_AGENT_PID=1138; export SSH_AGENT_PID;
+echo Agent pid 1138;
+** Message: 12:17:19.793: app.vala:130: /usr/bin/ssh-agent exit with this type of exit: 0
 Openbox-Message: 正当なメニューファイル"/usr/share/lxde/openbox/menu.xml"を見つけることができません。
-** Message: 11:22:44.894: x-terminal-emulator has very limited support, consider choosing another terminal
+** Message: 12:17:20.768: x-terminal-emulator has very limited support, consider choosing another terminal
 
-** (pcmanfm:1133): WARNING **: 11:22:44.899: The directory '/home/raspi4-01/Templates' doesn't exist, ignoring it
-** Message: 11:22:45.151: x-terminal-emulator has very limited support, consider choosing another terminal
+** (pcmanfm:1129): WARNING **: 12:17:20.776: The directory '/home/raspi4-01/Templates' doesn't exist, ignoring it
+** Message: 12:17:21.003: x-terminal-emulator has very limited support, consider choosing another terminal
 
-** (lxpanel:1132): WARNING **: 11:22:45.155: The directory '/home/raspi4-01/Templates' doesn't exist, ignoring it
-** Message: 11:22:47.008: netman: network manager service not running; plugin hidden
-** Message: 11:22:47.047: Connecting ...
-** Message: 11:22:47.048: Status changed to down
+** (lxpanel:1128): WARNING **: 12:17:21.007: The directory '/home/raspi4-01/Templates' doesn't exist, ignoring it
+** Message: 12:17:22.801: netman: network manager service not running; plugin hidden
+** Message: 12:17:22.841: Connecting ...
+** Message: 12:17:22.842: Status changed to down
 
-** (lxpanel:1132): CRITICAL **: 11:22:47.048: dhcpcd_open: デバイスに対する不適切なioctlです
-** Message: 11:22:47.257: ptbatt: battery 0 not found
-** Message: 11:22:47.912: up: Checking for updates
-** Message: 11:22:48.049: Status changed to opened
-** Message: 11:22:48.050: Connected to dhcpcd-8.1.2
-** Message: 11:22:48.050: Status changed to connected
-** Message: 11:22:48.050: eth0: CARRIER
-** Message: 11:22:48.050: eth0: Configured 172.22.5.201/16
-** Message: 11:22:48.051: wlan0: Not associated
-** Message: 11:22:48.053: wlan0: WPA status connected
-** Message: 11:22:52.651: up: Cache updated - comparing versions
-** Message: 11:48:41.158: up: Check complete - 69 updates available
-** Message: 11:49:59.699: eth0: Link is down
-** Message: 11:49:59.700: Status changed to disconnected
-** Message: 11:51:11.160: eth0: Link is up, configuring
-** Message: 11:51:11.161: Status changed to connecting
-** Message: 11:51:15.441: eth0: Configured 172.22.5.201/16
-** Message: 11:51:15.441: Status changed to connected
+** (lxpanel:1128): CRITICAL **: 12:17:22.842: dhcpcd_open: デバイスに対する不適切なioctlです
+** Message: 12:17:23.029: ptbatt: battery 0 not found
+** Message: 12:17:23.743: up: Checking for updates
+** Message: 12:17:23.843: Status changed to opened
+** Message: 12:17:23.843: Connected to dhcpcd-8.1.2
+** Message: 12:17:23.844: Status changed to connected
+** Message: 12:17:23.844: eth0: CARRIER
+** Message: 12:17:23.844: eth0: Configured 172.22.5.201/16
+** Message: 12:17:23.844: wlan0: Not associated
+** Message: 12:17:23.847: wlan0: WPA status connected
+** Message: 12:17:33.269: up: Error updating cache - E: Release file for http://archive.raspberrypi.org/debian/dists/bullseye/InRelease is not valid yet (invalid for another 4日 10時間 52分 48秒). Updates for this repository will not be applied.
+E: Release file for http://raspbian.raspberrypi.org/raspbian/dists/bullseye/InRelease is not valid yet (invalid for another 5日 1時間 5分 17秒). Updates for this repository will not be applied.
+
 /usr/share/system-config-printer/applet.py:364: Warning: Source ID 11 was not found when attempting to remove it
   GLib.source_remove (self.timer)
-** Message: 11:54:20.780: eth0: Link is down
-** Message: 11:54:20.781: Status changed to disconnected
 /usr/share/system-config-printer/applet.py:364: Warning: Source ID 17 was not found when attempting to remove it
   GLib.source_remove (self.timer)
-** Message: 11:55:14.944: eth0: Link is up, configuring
-** Message: 11:55:14.944: Status changed to connecting
-** Message: 11:55:20.318: eth0: Configured 172.22.5.201/16
-** Message: 11:55:20.318: Status changed to connected
 /usr/share/system-config-printer/applet.py:364: Warning: Source ID 19 was not found when attempting to remove it
   GLib.source_remove (self.timer)

@@ -83,20 +83,20 @@ int motor_drive(int fd, int lm, int rm) {
   // 右モーターの制御
   if (rm < 0) {
     set_pwm_output(fd, IN1_PWM, 0); // OUT -> GND
-    set_pwm_output(fd, IN2_PWM, rm); // OUT2 -> +Vs
+    set_pwm_output(fd, IN2_PWM, 16); // OUT2 -> +Vs
     rm = abs(rm);
   } else {
-    set_pwm_output(fd, IN1_PWM, rm); // OUT1 -> +Vs
+    set_pwm_output(fd, IN1_PWM, 16); // OUT1 -> +Vs
     set_pwm_output(fd, IN2_PWM, 0);  // OUT2 -> GND
   }
 
   // 左モーターの制御
   if (lm < 0) {
     set_pwm_output(fd, IN3_PWM, 0); // OUT3 -> GND
-    set_pwm_output(fd, IN4_PWM, lm); // OUT -> +Vs
+    set_pwm_output(fd, IN4_PWM, 16); // OUT -> +Vs
     lm = abs(lm);
   } else {
-    set_pwm_output(fd, IN3_PWM, lm); // OUT3 -> +Vs
+    set_pwm_output(fd, IN3_PWM, 16); // OUT3 -> +Vs
     set_pwm_output(fd, IN4_PWM, 0); // OUT4 -> GND
   }
   if (lm > 16) lm = 16;
@@ -131,28 +131,34 @@ int main() {
     rs = 0;
     if (digitalRead(GPIO_L) == HIGH) {
       printf("right\n");
-      rs = 7;
+      rs = 6;ms = 7;ls = 0;
+      delay(300);
     }
-    if (digitalRead(GPIO_ML) == HIGH) {
+    else if (digitalRead(GPIO_ML) == HIGH) {
       printf("middle right\n");
-      rs = 5; ms=3;
+      rs = 4;ms = 7;ls = 2;
+      delay(300);
     }
-    if (digitalRead(GPIO_M) == HIGH) {
+    else if (digitalRead(GPIO_M) == HIGH) {
       printf("middle\n");
-      ms = 8;
+      ms = 12;rs = 0;ls = 0;
+      delay(300);
     }
-    if (digitalRead(GPIO_MR) == HIGH) {
+    else if (digitalRead(GPIO_MR) == HIGH) {
       printf("middle left\n");
-      ls = 5; ms=3;
+      ls = 4;ms = 7;rs = 2;
+      delay(300);
     }
-    if (digitalRead(GPIO_R) == HIGH) {
+    else if (digitalRead(GPIO_R) == HIGH) {
       printf("left\n");
-      ls = 7;
+      ls = 6;ms = 7;rs = 0;
+      delay(300);
     }
-    else {
+    else{
       printf("not_read\n");
-      rs=10; ls=-8;
-    }
+      ls = 16; ms = 0; rs = -12;
+      delay(120);
+      }
     motor_drive(fd, ms+ls, ms+rs);
     delay(50);
   }

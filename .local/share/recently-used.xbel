@@ -29,4 +29,17 @@
       </metadata>
     </info>
   </bookmark>
+  <bookmark href="file:///home/raspi4-01/Motor_20444/main_t.c" added="2023-06-29T02:43:16.209206Z" modified="2023-06-29T02:43:16.209237Z" visited="2023-06-29T02:43:16.209212Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:groups>
+          <bookmark:group>geany</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="geany" exec="&apos;geany %u&apos;" modified="2023-06-29T02:43:16.209224Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
 </xbel>

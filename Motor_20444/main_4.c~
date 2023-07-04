@@ -3,6 +3,14 @@
 #include<time.h>
 #include "motor.h"
 #include "light.h"
+void run(int ls,int rs,int chg){
+  int fd = motor_init();
+  int cnt=0;
+  motor_drive(fd,ls,rs);
+  while(cnt<chg)cnt++;
+  motor_drive(fd,0,0);
+}
+void move_4(){
 int main(){
     int ls,rs,p_ls,p_rs;
     int state=3,chg=300,cnt=0;
@@ -50,8 +58,13 @@ int main(){
             }
 	    if(bi==0b11011)state=3;
         }else{
-	    if((state==0||state==3)&&cnt>chg){
+	    if(state==3 && cnt>chg){
 	      motor_drive(fd,0,0);
+	      while(bi!=0b00100)bi=sensor();
+	      move_4();
+	    }
+	    if(state==0 && cnt>chg){
+	      motor_drive(fd,16,4);
 	      while(bi!=0b00100)bi=sensor();
 	    }
             if(state==1)rs=16,ls=-8;

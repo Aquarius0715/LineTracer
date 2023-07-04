@@ -91,26 +91,31 @@ int motor_drive(int fd, int lm, int rm) {
   // 右モーターの制御
   if (rm < 0) {
     set_pwm_output(fd, IN1_PWM, 0); // OUT -> GND
-    set_pwm_output(fd, IN2_PWM, rm); // OUT2 -> +Vs
+    set_pwm_output(fd, IN2_PWM, 16); // OUT2 -> +Vs
     rm = abs(rm);
   } else {
-    set_pwm_output(fd, IN1_PWM, rm); // OUT1 -> +Vs
+    set_pwm_output(fd, IN1_PWM, 16); // OUT1 -> +Vs
     set_pwm_output(fd, IN2_PWM, 0);  // OUT2 -> GND
   }
 
   // 左モーターの制御
   if (lm < 0) {
     set_pwm_output(fd, IN3_PWM, 0); // OUT3 -> GND
-    set_pwm_output(fd, IN4_PWM, lm); // OUT -> +Vs
+    set_pwm_output(fd, IN4_PWM, 16); // OUT4 -> +Vs
     lm = abs(lm);
   } else {
-    set_pwm_output(fd, IN3_PWM, lm); // OUT3 -> +Vs
+    set_pwm_output(fd, IN3_PWM, 16); // OUT3 -> +Vs
     set_pwm_output(fd, IN4_PWM, 0); // OUT4 -> GND
   }
   if (lm > 16) lm = 16;
   if (rm > 16) rm = 16;
   set_pwm_output(fd, ENA_PWM, rm); // 右モータースタート
   set_pwm_output(fd, ENB_PWM, lm); // 左モータースタート
+  return 0;
+}
+
+int motor_reset(int fd){
+  motor_drive(fd, 0, 0);
   return 0;
 }
 
@@ -169,14 +174,22 @@ int main() {
 
   int ms, ls, rs;
   int read;
-  int all_ct=0;
+  // int all_ct=0;
+  int not_ct=0;
 
-  //コースに置いたらスタート
+  while(1){
+    motor_drive(fd, HS, -HS);
+    if(digitalRead(GPIO_L) == LOW && digitalRead(GPIO_R) == LOW) break;
+    delay(1000);
+  }
+  
+//０.コースに置いたらスタート
   while(1){
     if(digitalRead(GPIO_L) == LOW && digitalRead(GPIO_R) == LOW) break;
   }
-
-  while (1) {
+   
+//１．交差点に着くまで
+  while (read!=0b11111) {
     ms = 0;
     ls = 0;
     rs = 0;
@@ -190,7 +203,7 @@ int main() {
     }
     //ML
     else if(read==0b01000 || read==0b11000){
-      ms=MS; rs=LS;
+      ls=MS; rs=HS;
     }
     //M
     else if(read==0b00100 || read==0b01100 || read==0b00110){
@@ -198,30 +211,43 @@ int main() {
     }
     //MR
     else if(read==0b00010 || read==0b00011){
-      ms=MS; ls=LS;
+      ls=HS; rs=MS;
     }
     //R
     else if(read==0b00001){
       ls=HS;
     }
-    else if(read==0b00000 && all_ct%2==0){
-      ls=HS;
-      all_ct++;
-    }
-    else if(read==0b00000 && all_ct%2==1){
-      rs=HS;
-      all_ct++;
-    }
-    else if(read==0b11111){
-      ls=-HS;
-      rs=HS;
-      while(1){
-	motor_drive(fd,ms+ls, ms+rs);
+    //例外処理（センサがうまく読み取れなかったとき）
+    else if(read==0b00000){
+      while(read==0b00000){
+        if(not_ct==0){
+          ls=MS;
+        }
+        if(not_ct==1){
+          rs=MS;
+        }
+        not_ct++;
+        motor_drive(fd, ls, rs);
+        delay(50);
       }
     }
-
+    
     motor_drive(fd, ms+ls, ms+rs);
-    delay(50);
+    delay(100);
   }
+  motor_drive(fd, HS, HS);
+  delay(100);
+  printf("交差点ついたよ\n");
+  motor_reset(fd);
+
+//２．90度左回転
+  while(read==0b00100 || read==0b01100 || read==0b00110){
+
+    motor_drive(fd,-HS,HS);
+    delay(100);
+  }
+  motor_reset(fd);
+
+//３．バック
   return 0;
 }

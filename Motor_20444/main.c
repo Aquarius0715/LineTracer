@@ -5,18 +5,18 @@
 #include "light.h"
 int main(){
     int ls,rs,p_ls,p_rs;
-    int state,chg=300,cnt=0;
+    int state=3,chg=300,cnt=0;
     int fd = motor_init();
     int bi = 0b00000;
     motor_drive(fd,0,0);
     while(1){
-        cnt++;
+      cnt++;
         ls=0;
         rs=0;
         bi=sensor();
         if(bi != 0b00000 && state!=3){
             if(bi&(1<<0)){
-                ls+=4;
+                ls+=8;
                 rs+=16;
                 state=1;
             }
@@ -45,19 +45,14 @@ int main(){
 	    }
             if(bi&(1<<4)){
                 ls+=16;
-                rs+=4;
+                rs+=8;
                 state=2;
             }
 	    if(bi==0b11011)state=3;
         }else{
-	    if(state==0){
-	      motor_drive(fd,16,4);
-	      while(bi!=0b00100)bi=sensor();
-	    }
-	    if(state==3){
+	    if((state==0||state==3)&&cnt>chg){
 	      motor_drive(fd,0,0);
 	      while(bi!=0b00100)bi=sensor();
-	      state=0;
 	    }
             if(state==1)rs=16,ls=-8;
             if(state==2)rs=-8,ls=16;
