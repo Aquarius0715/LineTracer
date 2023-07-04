@@ -149,9 +149,9 @@ int main() {
       printf("left\n");
       ls = 10;
     }
-    else if (digitalRead(GPIO_L) == HIGH && digitalRead(GPIO_R) == HIGH){
+    else if (digitalRead(GPIO_L) == HIGH && digitalRead(GPIO_ML) == HIGH && digitalRead(GPIO_M) == HIGH && digitalRead(GPIO_MR) == HIGH && digitalRead(GPIO_R) == HIGH){
       motor_drive(fd, -16, 16);
-		delay(500);
+		delay(300);
     }
     motor_drive(fd, ms+ls, ms+rs);
     delay(100);
