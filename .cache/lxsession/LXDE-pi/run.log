@@ -1,215 +1,480 @@
-** Message: 12:17:19.162: environement.vala:58: Exporting primary_variable
-** Message: 12:17:19.162: environement.vala:59: desktop_environnement XDG_CURRENT_DESKTOP
-** Message: 12:17:19.162: environement.vala:150: confir_dirs is null, export : /etc/xdg
-** Message: 12:17:19.162: environement.vala:184: Exporting XDG_CONFIG_DIRS
-** Message: 12:17:19.162: environement.vala:218: custom_data :
-** Message: 12:17:19.162: environement.vala:219: data_dirs :/usr/share/fkms:/usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
-** Message: 12:17:19.163: environement.vala:220: data_dirs not null, export : /usr/share/fkms:/usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
-** Message: 12:17:19.163: environement.vala:225: Exporting XDG_DATA_DIRS
-** Message: 12:17:19.163: utils.vala:138: Config system location : /etc/xdg/lxsession/LXDE-pi
-** Message: 12:17:19.164: utils.vala:144: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
-** Message: 12:17:19.164: utils.vala:148: Final file used : /etc/xdg/lxsession/LXDE-pi/desktop.conf
-** Message: 12:17:19.165: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
-** Message: 12:17:19.165: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+** Message: 16:56:07.889: environement.vala:58: Exporting primary_variable
+** Message: 16:56:07.889: environement.vala:59: desktop_environnement XDG_CURRENT_DESKTOP
+** Message: 16:56:07.889: environement.vala:150: confir_dirs is null, export : /etc/xdg
+** Message: 16:56:07.889: environement.vala:184: Exporting XDG_CONFIG_DIRS
+** Message: 16:56:07.890: environement.vala:218: custom_data :
+** Message: 16:56:07.890: environement.vala:219: data_dirs :/usr/share/fkms:/usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
+** Message: 16:56:07.890: environement.vala:220: data_dirs not null, export : /usr/share/fkms:/usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
+** Message: 16:56:07.890: environement.vala:225: Exporting XDG_DATA_DIRS
+** Message: 16:56:07.890: utils.vala:138: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: 16:56:07.891: utils.vala:144: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+** Message: 16:56:07.891: utils.vala:148: Final file used : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+** Message: 16:56:07.891: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: 16:56:07.891: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
 
-** (lxsession:948): WARNING **: 12:17:19.167: utils.vala:70: そのようなファイルやディレクトリはありません
-** Message: 12:17:19.167: settings.vala:540: キーファイルにグループ“GTK”のキー“iGtk/ColorScheme”がありません
-** Message: 12:17:19.167: settings.vala:540: キーファイルにグループ“Session”のキー“windows_manager/command”がありません
-** Message: 12:17:19.167: settings.vala:540: キーファイルにグループ“Session”のキー“panel/command”がありません
-** Message: 12:17:19.167: settings.vala:540: キーファイルにグループ“Session”のキー“dock/command”がありません
-** Message: 12:17:19.167: settings.vala:540: キーファイルにグループ“Session”のキー“file_manager/command”がありません
-** Message: 12:17:19.167: settings.vala:540: キーファイルにグループ“Session”のキー“desktop_manager/command”がありません
-** Message: 12:17:19.167: settings.vala:540: キーファイルにグループ“Session”のキー“launcher_manager/autostart”がありません
-** Message: 12:17:19.168: settings.vala:540: キーファイルにグループ“Session”のキー“composite_manager/command”がありません
-** Message: 12:17:19.168: settings.vala:540: キーファイルにグループ“Session”のキー“im1/command”がありません
-** Message: 12:17:19.168: settings.vala:540: キーファイルにグループ“Session”のキー“im2/command”がありません
-** Message: 12:17:19.168: settings.vala:540: キーファイルにグループ“Session”のキー“widget1/command”がありません
-** Message: 12:17:19.168: settings.vala:540: キーファイルにグループ“Session”のキー“notification/command”がありません
-** Message: 12:17:19.168: settings.vala:540: キーファイルにグループ“Session”のキー“keybindings/command”がありません
-** Message: 12:17:19.168: settings.vala:540: キーファイルにグループ“Session”のキー“im_manager/command”がありません
-** Message: 12:17:19.168: settings.vala:540: キーファイルにグループ“Session”のキー“screensaver/command”がありません
-** Message: 12:17:19.168: settings.vala:540: キーファイルにグループ“Session”のキー“power_manager/command”がありません
-** Message: 12:17:19.168: settings.vala:540: キーファイルにグループ“Session”のキー“audio_manager/command”がありません
-** Message: 12:17:19.169: settings.vala:540: キーファイルにグループ“Session”のキー“workspace_manager/command”がありません
-** Message: 12:17:19.169: settings.vala:540: キーファイルにグループ“Session”のキー“screenshot_manager/command”がありません
-** Message: 12:17:19.169: settings.vala:540: キーファイルにグループ“Session”のキー“message_manager/command”がありません
-** Message: 12:17:19.169: settings.vala:540: キーファイルにグループ“Session”のキー“upgrade_manager/command”がありません
-** Message: 12:17:19.169: settings.vala:540: キーファイルにグループ“Session”のキー“updates_manager/command”がありません
-** Message: 12:17:19.169: settings.vala:540: キーファイルにグループ“Session”のキー“updates_manager/timeout”がありません
-** Message: 12:17:19.169: settings.vala:540: キーファイルにグループ“Session”のキー“crash_manager/command”がありません
-** Message: 12:17:19.169: settings.vala:540: キーファイルにグループ“Session”のキー“crash_manager/dev_mode”がありません
-** Message: 12:17:19.169: settings.vala:540: キーファイルにグループ“Session”のキー“crash_manager/timeout”がありません
-** Message: 12:17:19.170: settings.vala:540: キーファイルにグループ“Session”のキー“upstart_user_session”がありません
-** Message: 12:17:19.170: settings.vala:540: キーファイルにグループ“Session”のキー“proxy_manager/http”がありません
-** Message: 12:17:19.170: settings.vala:540: キーファイルにグループ“Session”のキー“a11y/command”がありません
-** Message: 12:17:19.170: settings.vala:540: キーファイルにグループ“Session”のキー“xrandr/command”がありません
-** Message: 12:17:19.170: settings.vala:540: キーファイルにグループ“Session”のキー“network_gui/command”がありません
-** Message: 12:17:19.170: settings.vala:540: キーファイルにグループ“Session”のキー“webbrowser/command”がありません
-** Message: 12:17:19.170: settings.vala:540: キーファイルにグループ“Session”のキー“email/command”がありません
-** Message: 12:17:19.170: settings.vala:540: キーファイルにグループ“Session”のキー“pdf_reader/command”がありません
-** Message: 12:17:19.171: settings.vala:540: キーファイルにグループ“Session”のキー“video_player/command”がありません
-** Message: 12:17:19.171: settings.vala:540: キーファイルにグループ“Session”のキー“audio_player/command”がありません
-** Message: 12:17:19.171: settings.vala:540: キーファイルにグループ“Session”のキー“image_display/command”がありません
-** Message: 12:17:19.171: settings.vala:540: キーファイルにグループ“Session”のキー“text_editor/command”がありません
-** Message: 12:17:19.171: settings.vala:540: キーファイルにグループ“Session”のキー“archive/command”がありません
-** Message: 12:17:19.171: settings.vala:540: キーファイルにグループ“Session”のキー“charmap/command”がありません
-** Message: 12:17:19.171: settings.vala:540: キーファイルにグループ“Session”のキー“calculator/command”がありません
-** Message: 12:17:19.171: settings.vala:540: キーファイルにグループ“Session”のキー“spreadsheet/command”がありません
-** Message: 12:17:19.171: settings.vala:540: キーファイルにグループ“Session”のキー“bittorent/command”がありません
-** Message: 12:17:19.171: settings.vala:540: キーファイルにグループ“Session”のキー“document/command”がありません
-** Message: 12:17:19.172: settings.vala:540: キーファイルにグループ“Session”のキー“webcam/command”がありません
-** Message: 12:17:19.172: settings.vala:540: キーファイルにグループ“Session”のキー“burn/command”がありません
-** Message: 12:17:19.172: settings.vala:540: キーファイルにグループ“Session”のキー“notes/command”がありません
-** Message: 12:17:19.172: settings.vala:540: キーファイルにグループ“Session”のキー“disk_utility/command”がありません
-** Message: 12:17:19.172: settings.vala:540: キーファイルにグループ“Session”のキー“tasks/command”がありません
-** Message: 12:17:19.172: settings.vala:540: キーファイルにグループ“Keymap”がありません
-** Message: 12:17:19.172: settings.vala:540: キーファイルにグループ“State”のキー“laptop_mode”がありません
-** Message: 12:17:19.172: settings.vala:540: キーファイルにグループ“Dbus”のキー“gnome”がありません
-** Message: 12:17:19.172: settings.vala:540: キーファイルにグループ“Environment”のキー“type”がありません
-** Message: 12:17:19.172: settings.vala:540: キーファイルにグループ“Environment”のキー“ubuntu_menuproxy”がありません
-** Message: 12:17:19.173: settings.vala:540: キーファイルにグループ“Environment”のキー“toolkit_integration”がありません
-** Message: 12:17:19.173: settings.vala:540: キーファイルにグループ“Environment”のキー“gtk/overlay_scrollbar_disable”がありません
-** Message: 12:17:19.173: settings.vala:540: キーファイルにグループ“Environment”のキー“qt/force_theme”がありません
-** Message: 12:17:19.173: settings.vala:540: キーファイルにグループ“Environment”のキー“qt/platform”がありません
-** Message: 12:17:19.174: settings.vala:462: Monitoring: /etc/xdg/lxsession/LXDE-pi/desktop.conf
-** Message: 12:17:19.174: settings.vala:470: Desktop file is not in config home, monitoring creation of it
-** Message: 12:17:19.174: settings.vala:485: Monitoring home path: /home/raspi4-01/.config/lxsession/LXDE-pi/desktop.conf
-** Message: 12:17:19.175: environement.vala:79: Exporting variable
-** Message: 12:17:19.175: environement.vala:80: desktop_environnement XDG_CURRENT_DESKTOP
-** Message: 12:17:19.175: environement.vala:177: custom_config :
-** Message: 12:17:19.175: environement.vala:178: config_dirs :/etc/xdg
-** Message: 12:17:19.175: environement.vala:179: confir_dirs not null, export : /etc/xdg
-** Message: 12:17:19.175: environement.vala:184: Exporting XDG_CONFIG_DIRS
-** Message: 12:17:19.175: environement.vala:218: custom_data :
-** Message: 12:17:19.175: environement.vala:219: data_dirs :/usr/share/fkms:/usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
-** Message: 12:17:19.175: environement.vala:220: data_dirs not null, export : /usr/share/fkms:/usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
-** Message: 12:17:19.175: environement.vala:225: Exporting XDG_DATA_DIRS
-** Message: 12:17:19.175: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
-** Message: 12:17:19.175: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+** (lxsession:956): WARNING **: 16:56:07.893: utils.vala:70: そのようなファイルやディレクトリはありません
+** Message: 16:56:07.894: settings.vala:540: キーファイルにグループ“GTK”のキー“iGtk/ColorScheme”がありません
+** Message: 16:56:07.894: settings.vala:540: キーファイルにグループ“Session”のキー“windows_manager/command”がありません
+** Message: 16:56:07.894: settings.vala:540: キーファイルにグループ“Session”のキー“panel/command”がありません
+** Message: 16:56:07.894: settings.vala:540: キーファイルにグループ“Session”のキー“dock/command”がありません
+** Message: 16:56:07.894: settings.vala:540: キーファイルにグループ“Session”のキー“file_manager/command”がありません
+** Message: 16:56:07.894: settings.vala:540: キーファイルにグループ“Session”のキー“desktop_manager/command”がありません
+** Message: 16:56:07.894: settings.vala:540: キーファイルにグループ“Session”のキー“launcher_manager/autostart”がありません
+** Message: 16:56:07.894: settings.vala:540: キーファイルにグループ“Session”のキー“composite_manager/command”がありません
+** Message: 16:56:07.894: settings.vala:540: キーファイルにグループ“Session”のキー“im1/command”がありません
+** Message: 16:56:07.894: settings.vala:540: キーファイルにグループ“Session”のキー“im2/command”がありません
+** Message: 16:56:07.894: settings.vala:540: キーファイルにグループ“Session”のキー“widget1/command”がありません
+** Message: 16:56:07.894: settings.vala:540: キーファイルにグループ“Session”のキー“notification/command”がありません
+** Message: 16:56:07.894: settings.vala:540: キーファイルにグループ“Session”のキー“keybindings/command”がありません
+** Message: 16:56:07.894: settings.vala:540: キーファイルにグループ“Session”のキー“im_manager/command”がありません
+** Message: 16:56:07.895: settings.vala:540: キーファイルにグループ“Session”のキー“screensaver/command”がありません
+** Message: 16:56:07.895: settings.vala:540: キーファイルにグループ“Session”のキー“power_manager/command”がありません
+** Message: 16:56:07.895: settings.vala:540: キーファイルにグループ“Session”のキー“audio_manager/command”がありません
+** Message: 16:56:07.895: settings.vala:540: キーファイルにグループ“Session”のキー“workspace_manager/command”がありません
+** Message: 16:56:07.895: settings.vala:540: キーファイルにグループ“Session”のキー“screenshot_manager/command”がありません
+** Message: 16:56:07.895: settings.vala:540: キーファイルにグループ“Session”のキー“message_manager/command”がありません
+** Message: 16:56:07.895: settings.vala:540: キーファイルにグループ“Session”のキー“upgrade_manager/command”がありません
+** Message: 16:56:07.895: settings.vala:540: キーファイルにグループ“Session”のキー“updates_manager/command”がありません
+** Message: 16:56:07.895: settings.vala:540: キーファイルにグループ“Session”のキー“updates_manager/timeout”がありません
+** Message: 16:56:07.895: settings.vala:540: キーファイルにグループ“Session”のキー“crash_manager/command”がありません
+** Message: 16:56:07.895: settings.vala:540: キーファイルにグループ“Session”のキー“crash_manager/dev_mode”がありません
+** Message: 16:56:07.896: settings.vala:540: キーファイルにグループ“Session”のキー“crash_manager/timeout”がありません
+** Message: 16:56:07.896: settings.vala:540: キーファイルにグループ“Session”のキー“upstart_user_session”がありません
+** Message: 16:56:07.896: settings.vala:540: キーファイルにグループ“Session”のキー“proxy_manager/http”がありません
+** Message: 16:56:07.896: settings.vala:540: キーファイルにグループ“Session”のキー“a11y/command”がありません
+** Message: 16:56:07.896: settings.vala:540: キーファイルにグループ“Session”のキー“xrandr/command”がありません
+** Message: 16:56:07.896: settings.vala:540: キーファイルにグループ“Session”のキー“network_gui/command”がありません
+** Message: 16:56:07.896: settings.vala:540: キーファイルにグループ“Session”のキー“webbrowser/command”がありません
+** Message: 16:56:07.896: settings.vala:540: キーファイルにグループ“Session”のキー“email/command”がありません
+** Message: 16:56:07.896: settings.vala:540: キーファイルにグループ“Session”のキー“pdf_reader/command”がありません
+** Message: 16:56:07.896: settings.vala:540: キーファイルにグループ“Session”のキー“video_player/command”がありません
+** Message: 16:56:07.896: settings.vala:540: キーファイルにグループ“Session”のキー“audio_player/command”がありません
+** Message: 16:56:07.896: settings.vala:540: キーファイルにグループ“Session”のキー“image_display/command”がありません
+** Message: 16:56:07.897: settings.vala:540: キーファイルにグループ“Session”のキー“text_editor/command”がありません
+** Message: 16:56:07.897: settings.vala:540: キーファイルにグループ“Session”のキー“archive/command”がありません
+** Message: 16:56:07.897: settings.vala:540: キーファイルにグループ“Session”のキー“charmap/command”がありません
+** Message: 16:56:07.897: settings.vala:540: キーファイルにグループ“Session”のキー“calculator/command”がありません
+** Message: 16:56:07.897: settings.vala:540: キーファイルにグループ“Session”のキー“spreadsheet/command”がありません
+** Message: 16:56:07.897: settings.vala:540: キーファイルにグループ“Session”のキー“bittorent/command”がありません
+** Message: 16:56:07.897: settings.vala:540: キーファイルにグループ“Session”のキー“document/command”がありません
+** Message: 16:56:07.897: settings.vala:540: キーファイルにグループ“Session”のキー“webcam/command”がありません
+** Message: 16:56:07.897: settings.vala:540: キーファイルにグループ“Session”のキー“burn/command”がありません
+** Message: 16:56:07.897: settings.vala:540: キーファイルにグループ“Session”のキー“notes/command”がありません
+** Message: 16:56:07.897: settings.vala:540: キーファイルにグループ“Session”のキー“disk_utility/command”がありません
+** Message: 16:56:07.897: settings.vala:540: キーファイルにグループ“Session”のキー“tasks/command”がありません
+** Message: 16:56:07.897: settings.vala:540: キーファイルにグループ“Keymap”がありません
+** Message: 16:56:07.898: settings.vala:540: キーファイルにグループ“State”のキー“laptop_mode”がありません
+** Message: 16:56:07.898: settings.vala:540: キーファイルにグループ“Dbus”のキー“gnome”がありません
+** Message: 16:56:07.898: settings.vala:540: キーファイルにグループ“Environment”のキー“type”がありません
+** Message: 16:56:07.898: settings.vala:540: キーファイルにグループ“Environment”のキー“ubuntu_menuproxy”がありません
+** Message: 16:56:07.898: settings.vala:540: キーファイルにグループ“Environment”のキー“toolkit_integration”がありません
+** Message: 16:56:07.898: settings.vala:540: キーファイルにグループ“Environment”のキー“gtk/overlay_scrollbar_disable”がありません
+** Message: 16:56:07.898: settings.vala:540: キーファイルにグループ“Environment”のキー“qt/force_theme”がありません
+** Message: 16:56:07.898: settings.vala:540: キーファイルにグループ“Environment”のキー“qt/platform”がありません
+** Message: 16:56:07.899: settings.vala:462: Monitoring: /etc/xdg/lxsession/LXDE-pi/desktop.conf
+** Message: 16:56:07.899: settings.vala:470: Desktop file is not in config home, monitoring creation of it
+** Message: 16:56:07.899: settings.vala:485: Monitoring home path: /home/raspi4-01/.config/lxsession/LXDE-pi/desktop.conf
+** Message: 16:56:07.900: environement.vala:79: Exporting variable
+** Message: 16:56:07.900: environement.vala:80: desktop_environnement XDG_CURRENT_DESKTOP
+** Message: 16:56:07.900: environement.vala:177: custom_config :
+** Message: 16:56:07.900: environement.vala:178: config_dirs :/etc/xdg
+** Message: 16:56:07.900: environement.vala:179: confir_dirs not null, export : /etc/xdg
+** Message: 16:56:07.900: environement.vala:184: Exporting XDG_CONFIG_DIRS
+** Message: 16:56:07.900: environement.vala:218: custom_data :
+** Message: 16:56:07.900: environement.vala:219: data_dirs :/usr/share/fkms:/usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
+** Message: 16:56:07.900: environement.vala:220: data_dirs not null, export : /usr/share/fkms:/usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
+** Message: 16:56:07.900: environement.vala:225: Exporting XDG_DATA_DIRS
+** Message: 16:56:07.900: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: 16:56:07.900: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
 
-** (lxsession:948): WARNING **: 12:17:19.176: utils.vala:70: そのようなファイルやディレクトリはありません
-** Message: 12:17:19.176: environement.vala:254: No entry in [Environment_variable]. キーファイルにグループ“Environment_variable”がありません
+** (lxsession:956): WARNING **: 16:56:07.901: utils.vala:70: そのようなファイルやディレクトリはありません
+** Message: 16:56:07.901: environement.vala:254: No entry in [Environment_variable]. キーファイルにグループ“Environment_variable”がありません
 
-** (lxsession:948): WARNING **: 12:17:19.181: process.vala:49: 子プロセス“xprop”の起動に失敗しました (そのようなファイルやディレクトリはありません)
+** (lxsession:956): WARNING **: 16:56:07.907: process.vala:49: 子プロセス“xprop”の起動に失敗しました (そのようなファイルやディレクトリはありません)
 
-** (lxsession:948): WARNING **: 12:17:19.182: process.vala:50: Error when launching xprop
-** Message: 12:17:19.182: utils.vala:138: Config system location : /etc/xdg/lxsession/LXDE-pi
-** Message: 12:17:19.182: utils.vala:144: System system path location : /etc/xdg/lxsession/LXDE-pi/conffiles.conf
-** Message: 12:17:19.182: utils.vala:148: Final file used : /etc/xdg/lxsession/LXDE-pi/conffiles.conf
-** Message: 12:17:19.182: options.vala:164: Activate xsettings_manager build-in
-** Message: 12:17:19.182: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
-** Message: 12:17:19.182: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+** (lxsession:956): WARNING **: 16:56:07.908: process.vala:50: Error when launching xprop
+** Message: 16:56:07.908: utils.vala:138: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: 16:56:07.909: utils.vala:144: System system path location : /etc/xdg/lxsession/LXDE-pi/conffiles.conf
+** Message: 16:56:07.909: utils.vala:148: Final file used : /etc/xdg/lxsession/LXDE-pi/conffiles.conf
+** Message: 16:56:07.909: options.vala:164: Activate xsettings_manager build-in
+** Message: 16:56:07.910: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: 16:56:07.910: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
 
-** (lxsession:948): WARNING **: 12:17:19.183: utils.vala:70: そのようなファイルやディレクトリはありません
-** Message: 12:17:19.205: app.vala:728: polkit separate
-** Message: 12:17:19.205: app.vala:728: polkit separate
-** Message: 12:17:19.219: app.vala:76: Launching lxpolkit 
-** Message: 12:17:19.220: utils.vala:138: Config system location : /etc/xdg/lxsession/LXDE-pi
-** Message: 12:17:19.220: utils.vala:144: System system path location : /etc/xdg/lxsession/LXDE-pi/autostart
-** Message: 12:17:19.220: utils.vala:148: Final file used : /etc/xdg/lxsession/LXDE-pi/autostart
-** Message: 12:17:19.220: autostart.vala:42: Autostart path : /etc/xdg/lxsession/LXDE-pi/autostart
-** Message: 12:17:19.239: app.vala:76: Launching lxpanel 
-** Message: 12:17:19.257: app.vala:76: Launching pcmanfm 
+** (lxsession:956): WARNING **: 16:56:07.910: utils.vala:70: そのようなファイルやディレクトリはありません
+** Message: 16:56:07.936: app.vala:728: polkit separate
+** Message: 16:56:07.936: app.vala:728: polkit separate
+** Message: 16:56:07.942: app.vala:76: Launching lxpolkit 
+** Message: 16:56:07.942: utils.vala:138: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: 16:56:07.942: utils.vala:144: System system path location : /etc/xdg/lxsession/LXDE-pi/autostart
+** Message: 16:56:07.942: utils.vala:148: Final file used : /etc/xdg/lxsession/LXDE-pi/autostart
+** Message: 16:56:07.942: autostart.vala:42: Autostart path : /etc/xdg/lxsession/LXDE-pi/autostart
+** Message: 16:56:07.959: app.vala:76: Launching lxpanel 
+** Message: 16:56:07.975: app.vala:76: Launching pcmanfm 
 
-** (lxsession:948): WARNING **: 12:17:19.262: app.vala:86: 子プロセス“xscreensaver”の起動に失敗しました (そのようなファイルやディレクトリはありません)
+** (lxsession:956): WARNING **: 16:56:07.980: app.vala:86: 子プロセス“xscreensaver”の起動に失敗しました (そのようなファイルやディレクトリはありません)
 
-** (lxsession:948): WARNING **: 12:17:19.262: app.vala:87: Error when launching xscreensaver
-** Message: 12:17:19.276: options.vala:107: Create build-in Clipboard
-** Message: 12:17:19.278: main.vala:450: Check keymap_mode (null)
-** Message: 12:17:19.282: app.vala:76: Launching /usr/bin/ssh-agent 
-SSH_AUTH_SOCK=/tmp/ssh-4F5zTX5vb0yK/agent.1133; export SSH_AUTH_SOCK;
-SSH_AGENT_PID=1138; export SSH_AGENT_PID;
-echo Agent pid 1138;
-** Message: 12:17:19.793: app.vala:130: /usr/bin/ssh-agent exit with this type of exit: 0
+** (lxsession:956): WARNING **: 16:56:07.980: app.vala:87: Error when launching xscreensaver
+** Message: 16:56:07.990: options.vala:107: Create build-in Clipboard
+** Message: 16:56:07.992: main.vala:450: Check keymap_mode (null)
+** Message: 16:56:07.998: app.vala:76: Launching /usr/bin/ssh-agent 
+SSH_AUTH_SOCK=/tmp/ssh-ygppGqeykD8t/agent.1157; export SSH_AUTH_SOCK;
+SSH_AGENT_PID=1167; export SSH_AGENT_PID;
+echo Agent pid 1167;
+** Message: 16:56:08.471: app.vala:130: /usr/bin/ssh-agent exit with this type of exit: 0
 Openbox-Message: 正当なメニューファイル"/usr/share/lxde/openbox/menu.xml"を見つけることができません。
-** Message: 12:17:20.768: x-terminal-emulator has very limited support, consider choosing another terminal
+** Message: 16:56:09.656: x-terminal-emulator has very limited support, consider choosing another terminal
 
-** (pcmanfm:1129): WARNING **: 12:17:20.776: The directory '/home/raspi4-01/Templates' doesn't exist, ignoring it
-** Message: 12:17:21.003: x-terminal-emulator has very limited support, consider choosing another terminal
+** (pcmanfm:1153): WARNING **: 16:56:09.661: The directory '/home/raspi4-01/Templates' doesn't exist, ignoring it
+** Message: 16:56:09.908: x-terminal-emulator has very limited support, consider choosing another terminal
 
-** (lxpanel:1128): WARNING **: 12:17:21.007: The directory '/home/raspi4-01/Templates' doesn't exist, ignoring it
-** Message: 12:17:22.801: netman: network manager service not running; plugin hidden
-** Message: 12:17:22.841: Connecting ...
-** Message: 12:17:22.842: Status changed to down
+** (lxpanel:1152): WARNING **: 16:56:09.912: The directory '/home/raspi4-01/Templates' doesn't exist, ignoring it
+** Message: 16:56:11.713: netman: network manager service not running; plugin hidden
+** Message: 16:56:11.760: Connecting ...
+** Message: 16:56:11.761: Status changed to down
 
-** (lxpanel:1128): CRITICAL **: 12:17:22.842: dhcpcd_open: デバイスに対する不適切なioctlです
-** Message: 12:17:23.029: ptbatt: battery 0 not found
-** Message: 12:17:23.743: up: Checking for updates
-** Message: 12:17:23.843: Status changed to opened
-** Message: 12:17:23.843: Connected to dhcpcd-8.1.2
-** Message: 12:17:23.844: Status changed to connected
-** Message: 12:17:23.844: eth0: CARRIER
-** Message: 12:17:23.844: eth0: Configured 172.22.5.201/16
-** Message: 12:17:23.844: wlan0: Not associated
-** Message: 12:17:23.847: wlan0: WPA status connected
-** Message: 12:17:33.269: up: Error updating cache - E: Release file for http://archive.raspberrypi.org/debian/dists/bullseye/InRelease is not valid yet (invalid for another 4日 10時間 52分 48秒). Updates for this repository will not be applied.
-E: Release file for http://raspbian.raspberrypi.org/raspbian/dists/bullseye/InRelease is not valid yet (invalid for another 5日 1時間 5分 17秒). Updates for this repository will not be applied.
+** (lxpanel:1152): CRITICAL **: 16:56:11.761: dhcpcd_open: デバイスに対する不適切なioctlです
+** Message: 16:56:12.016: ptbatt: battery 0 not found
+** Message: 16:56:12.718: up: Checking for updates
+** Message: 16:56:12.770: Status changed to opened
+** Message: 16:56:12.770: Connected to dhcpcd-8.1.2
+** Message: 16:56:12.771: Status changed to connected
+** Message: 16:56:12.771: eth0: CARRIER
+** Message: 16:56:12.771: eth0: Configured 172.22.5.201/16
+** Message: 16:56:12.771: wlan0: Not associated
+** Message: 16:56:12.774: wlan0: WPA status connected
+** Message: 16:56:17.693: up: Error updating cache - E: Release file for http://raspbian.raspberrypi.org/raspbian/dists/bullseye/InRelease is not valid yet (invalid for another 1日 14時間 26分 51秒). Updates for this repository will not be applied.
 
 /usr/share/system-config-printer/applet.py:364: Warning: Source ID 11 was not found when attempting to remove it
   GLib.source_remove (self.timer)
+** Message: 10:48:22.338: eth0: Link is down
+** Message: 10:48:22.339: Status changed to disconnected
 /usr/share/system-config-printer/applet.py:364: Warning: Source ID 17 was not found when attempting to remove it
   GLib.source_remove (self.timer)
+** Message: 10:49:11.950: eth0: Link is up, configuring
+** Message: 10:49:11.950: Status changed to connecting
+** Message: 10:49:17.275: eth0: Configured 172.22.5.201/16
+** Message: 10:49:17.276: Status changed to connected
 /usr/share/system-config-printer/applet.py:364: Warning: Source ID 19 was not found when attempting to remove it
   GLib.source_remove (self.timer)
+** Message: 10:50:13.068: eth0: Link is down
+** Message: 10:50:13.069: Status changed to disconnected
 /usr/share/system-config-printer/applet.py:364: Warning: Source ID 25 was not found when attempting to remove it
   GLib.source_remove (self.timer)
-** Message: 15:16:45.506: eth0: Link is down
-** Message: 15:16:45.507: Status changed to disconnected
-** Message: 15:17:37.477: eth0: Link is up, configuring
-** Message: 15:17:37.478: Status changed to connecting
-** Message: 15:17:42.994: eth0: Configured 172.22.5.201/16
-** Message: 15:17:42.995: Status changed to connected
+** Message: 10:50:38.092: eth0: Link is up, configuring
+** Message: 10:50:38.093: Status changed to connecting
+** Message: 10:50:43.374: eth0: Configured 172.22.5.201/16
+** Message: 10:50:43.375: Status changed to connected
 /usr/share/system-config-printer/applet.py:364: Warning: Source ID 27 was not found when attempting to remove it
   GLib.source_remove (self.timer)
+** Message: 10:52:45.139: eth0: Link is down
+** Message: 10:52:45.140: Status changed to disconnected
 /usr/share/system-config-printer/applet.py:364: Warning: Source ID 33 was not found when attempting to remove it
   GLib.source_remove (self.timer)
-** Message: 15:18:53.479: eth0: Link is down
-** Message: 15:18:53.480: Status changed to disconnected
-** Message: 15:19:18.894: eth0: Link is up, configuring
-** Message: 15:19:18.894: Status changed to connecting
-** Message: 15:19:24.365: eth0: Configured 172.22.5.201/16
-** Message: 15:19:24.365: Status changed to connected
+** Message: 10:53:41.819: eth0: Link is up, configuring
+** Message: 10:53:41.820: Status changed to connecting
+** Message: 10:53:47.262: eth0: Configured 172.22.5.201/16
+** Message: 10:53:47.263: Status changed to connected
 /usr/share/system-config-printer/applet.py:364: Warning: Source ID 35 was not found when attempting to remove it
   GLib.source_remove (self.timer)
-** Message: 15:24:29.300: eth0: Link is down
-** Message: 15:24:29.301: Status changed to disconnected
+** Message: 10:55:37.331: eth0: Link is down
+** Message: 10:55:37.331: Status changed to disconnected
 /usr/share/system-config-printer/applet.py:364: Warning: Source ID 41 was not found when attempting to remove it
   GLib.source_remove (self.timer)
-** Message: 15:25:09.114: eth0: Link is up, configuring
-** Message: 15:25:09.114: Status changed to connecting
-** Message: 15:25:14.647: eth0: Configured 172.22.5.201/16
-** Message: 15:25:14.647: Status changed to connected
+** Message: 10:56:17.133: eth0: Link is up, configuring
+** Message: 10:56:17.134: Status changed to connecting
+** Message: 10:56:22.669: eth0: Configured 172.22.5.201/16
+** Message: 10:56:22.669: Status changed to connected
 /usr/share/system-config-printer/applet.py:364: Warning: Source ID 43 was not found when attempting to remove it
   GLib.source_remove (self.timer)
+** Message: 10:58:12.047: eth0: Link is down
+** Message: 10:58:12.047: Status changed to disconnected
 /usr/share/system-config-printer/applet.py:364: Warning: Source ID 49 was not found when attempting to remove it
   GLib.source_remove (self.timer)
-** Message: 15:26:12.713: eth0: Link is down
-** Message: 15:26:12.714: Status changed to disconnected
-** Message: 15:27:07.894: eth0: Link is up, configuring
-** Message: 15:27:07.894: Status changed to connecting
-** Message: 15:27:12.951: eth0: Configured 172.22.5.201/16
-** Message: 15:27:12.952: Status changed to connected
+** Message: 10:59:23.449: eth0: Link is up, configuring
+** Message: 10:59:23.450: Status changed to connecting
+** Message: 10:59:28.408: eth0: Configured 172.22.5.201/16
+** Message: 10:59:28.408: Status changed to connected
 /usr/share/system-config-printer/applet.py:364: Warning: Source ID 51 was not found when attempting to remove it
   GLib.source_remove (self.timer)
+** Message: 11:04:13.194: eth0: Link is down
+** Message: 11:04:13.194: Status changed to disconnected
 /usr/share/system-config-printer/applet.py:364: Warning: Source ID 57 was not found when attempting to remove it
   GLib.source_remove (self.timer)
-** Message: 15:30:11.396: eth0: Link is down
-** Message: 15:30:11.397: Status changed to disconnected
-** Message: 15:30:39.894: eth0: Link is up, configuring
-** Message: 15:30:39.894: Status changed to connecting
-** Message: 15:30:45.465: eth0: Configured 172.22.5.201/16
-** Message: 15:30:45.466: Status changed to connected
+** Message: 11:04:48.280: eth0: Link is up, configuring
+** Message: 11:04:48.280: Status changed to connecting
+** Message: 11:04:53.337: eth0: Configured 172.22.5.201/16
+** Message: 11:04:53.337: Status changed to connected
 /usr/share/system-config-printer/applet.py:364: Warning: Source ID 59 was not found when attempting to remove it
   GLib.source_remove (self.timer)
 /usr/share/system-config-printer/applet.py:364: Warning: Source ID 65 was not found when attempting to remove it
   GLib.source_remove (self.timer)
-/usr/share/system-config-printer/applet.py:364: Warning: Source ID 69 was not found when attempting to remove it
+** Message: 11:05:18.608: eth0: Link is down
+** Message: 11:05:18.609: Status changed to disconnected
+** Message: 11:06:43.570: eth0: Link is up, configuring
+** Message: 11:06:43.570: Status changed to connecting
+** Message: 11:06:48.811: eth0: Configured 172.22.5.201/16
+** Message: 11:06:48.812: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 67 was not found when attempting to remove it
   GLib.source_remove (self.timer)
-** Message: 15:32:21.409: eth0: Link is down
-** Message: 15:32:21.410: Status changed to disconnected
-** Message: 15:33:17.564: eth0: Link is up, configuring
-** Message: 15:33:17.564: Status changed to connecting
-** Message: 15:33:22.337: eth0: Configured 172.22.5.201/16
-** Message: 15:33:22.338: Status changed to connected
-/usr/share/system-config-printer/applet.py:364: Warning: Source ID 71 was not found when attempting to remove it
+** Message: 11:07:03.988: eth0: Link is down
+** Message: 11:07:03.989: Status changed to disconnected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 73 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:08:07.150: eth0: Link is up, configuring
+** Message: 11:08:07.151: Status changed to connecting
+** Message: 11:08:11.739: eth0: Configured 172.22.5.201/16
+** Message: 11:08:11.740: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 75 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 81 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:09:49.694: eth0: Link is down
+** Message: 11:09:49.695: Status changed to disconnected
+** Message: 11:09:54.110: eth0: Link is up, configuring
+** Message: 11:09:54.110: Status changed to connecting
+** Message: 11:09:59.452: eth0: Configured 172.22.5.201/16
+** Message: 11:09:59.453: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 83 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:10:11.104: eth0: Link is down
+** Message: 11:10:11.105: Status changed to disconnected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 89 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:11:12.630: eth0: Link is up, configuring
+** Message: 11:11:12.630: Status changed to connecting
+** Message: 11:11:17.844: eth0: Configured 172.22.5.201/16
+** Message: 11:11:17.844: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 91 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 97 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:11:33.937: eth0: Link is down
+** Message: 11:11:33.937: Status changed to disconnected
+** Message: 11:12:09.750: eth0: Link is up, configuring
+** Message: 11:12:09.751: Status changed to connecting
+** Message: 11:12:15.233: eth0: Configured 172.22.5.201/16
+** Message: 11:12:15.233: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 99 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:16:27.201: eth0: Link is down
+** Message: 11:16:27.202: Status changed to disconnected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 105 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:18:18.060: eth0: Link is up, configuring
+** Message: 11:18:18.060: Status changed to connecting
+** Message: 11:18:23.522: eth0: Configured 172.22.5.201/16
+** Message: 11:18:23.522: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 107 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:23:01.371: eth0: Link is down
+** Message: 11:23:01.372: Status changed to disconnected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 113 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:23:52.969: eth0: Link is up, configuring
+** Message: 11:23:52.970: Status changed to connecting
+** Message: 11:23:57.474: eth0: Configured 172.22.5.201/16
+** Message: 11:23:57.475: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 115 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 121 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:24:26.631: eth0: Link is down
+** Message: 11:24:26.632: Status changed to disconnected
+** Message: 11:25:43.349: eth0: Link is up, configuring
+** Message: 11:25:43.350: Status changed to connecting
+** Message: 11:25:48.075: eth0: Configured 172.22.5.201/16
+** Message: 11:25:48.075: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 123 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 129 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+
+(pcmanfm:1153): Gtk-WARNING **: 11:26:42.177: Theme parsing error: <data>:2:27: The style property GtkWidget:focus-padding is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(pcmanfm:1153): Gtk-WARNING **: 11:26:42.177: Theme parsing error: <data>:3:30: The style property GtkWidget:focus-line-width is deprecated and shouldn't be used anymore. It will be removed in a future version
+
+(pcmanfm:1153): Gdk-CRITICAL **: 11:26:51.098: gdk_window_get_device_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+
+(pcmanfm:1153): Gdk-CRITICAL **: 11:26:51.129: gdk_window_get_device_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+
+(pcmanfm:1153): Gdk-CRITICAL **: 11:26:51.163: gdk_window_get_device_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+
+(pcmanfm:1153): Gdk-CRITICAL **: 11:26:51.196: gdk_window_get_device_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+
+(pcmanfm:1153): Gdk-CRITICAL **: 11:26:51.226: gdk_window_get_device_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+
+(pcmanfm:1153): Gdk-CRITICAL **: 11:26:51.256: gdk_window_get_device_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+
+(pcmanfm:1153): Gdk-CRITICAL **: 11:26:51.286: gdk_window_get_device_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+
+(pcmanfm:1153): Gdk-CRITICAL **: 11:26:51.317: gdk_window_get_device_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+
+(pcmanfm:1153): Gdk-CRITICAL **: 11:26:51.347: gdk_window_get_device_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+
+(pcmanfm:1153): Gdk-CRITICAL **: 11:26:51.383: gdk_window_get_device_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+
+(pcmanfm:1153): Gdk-CRITICAL **: 11:26:51.414: gdk_window_get_device_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+
+(pcmanfm:1153): Gdk-CRITICAL **: 11:26:51.444: gdk_window_get_device_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+
+(pcmanfm:1153): Gtk-WARNING **: 11:26:58.218: gtk_menu_detach(): menu is not attached
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 132 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:27:03.385: eth0: Link is down
+** Message: 11:27:03.386: Status changed to disconnected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 134 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:28:28.340: eth0: Link is up, configuring
+** Message: 11:28:28.340: Status changed to connecting
+** Message: 11:28:33.237: eth0: Configured 172.22.5.201/16
+** Message: 11:28:33.238: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 136 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 142 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 145 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:29:00.715: eth0: Link is down
+** Message: 11:29:00.717: Status changed to disconnected
+** Message: 11:29:56.115: eth0: Link is up, configuring
+** Message: 11:29:56.116: Status changed to connecting
+** Message: 11:30:00.829: eth0: Configured 172.22.5.201/16
+** Message: 11:30:00.830: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 147 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 153 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+
+(pcmanfm:1153): Gtk-WARNING **: 11:30:34.786: gtk_menu_detach(): menu is not attached
+[4254:4254:0706/113044.063518:ERROR:gl_display.cc(508)] EGL Driver message (Error) eglCreateContext: dri2_create_context
+[4254:4254:0706/113044.364758:ERROR:gpu_init.cc(523)] Passthrough is not supported, GL is egl, ANGLE is 
+[4254:4254:0706/113044.560123:ERROR:gl_display.cc(508)] EGL Driver message (Error) eglCreateContext: dri2_create_context
+[4193:4193:0706/113044.903782:ERROR:component_loader.cc(197)] Failed to parse extension manifest.
+[4254:4254:0706/113047.040682:ERROR:gl_display.cc(508)] EGL Driver message (Error) eglCreateContext: dri2_create_context
+[4254:4254:0706/113047.326690:ERROR:gles2_cmd_decoder.cc(2800)] [GroupMarkerNotSet(crbug.com/242999)!:5C7C2250]GL ERROR :GL_INVALID_ENUM : BackFramebuffer::Create: <- error from previous GL command
+[4254:4254:0706/113048.341177:ERROR:gl_display.cc(508)] EGL Driver message (Error) eglCreateContext: dri2_create_context
+[4254:4254:0706/113048.366518:ERROR:gles2_cmd_decoder.cc(2800)] [GroupMarkerNotSet(crbug.com/242999)!:5CA42250]GL ERROR :GL_INVALID_ENUM : BackFramebuffer::Create: <- error from previous GL command
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 156 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:31:41.442: eth0: Link is down
+** Message: 11:31:41.443: Status changed to disconnected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 158 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:32:14.730: eth0: Link is up, configuring
+** Message: 11:32:14.730: Status changed to connecting
+** Message: 11:32:19.481: eth0: Configured 172.22.5.201/16
+** Message: 11:32:19.482: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 160 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 166 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 168 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:36:22.750: eth0: Link is down
+** Message: 11:36:22.751: Status changed to disconnected
+** Message: 11:36:55.940: eth0: Link is up, configuring
+** Message: 11:36:55.940: Status changed to connecting
+** Message: 11:37:01.032: eth0: Configured 172.22.5.201/16
+** Message: 11:37:01.032: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 170 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 176 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:37:23.702: eth0: Link is down
+** Message: 11:37:23.702: Status changed to disconnected
+** Message: 11:38:26.420: eth0: Link is up, configuring
+** Message: 11:38:26.420: Status changed to connecting
+** Message: 11:38:31.673: eth0: Configured 172.22.5.201/16
+** Message: 11:38:31.674: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 178 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:46:02.021: eth0: Link is down
+** Message: 11:46:02.022: Status changed to disconnected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 184 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:47:50.970: eth0: Link is up, configuring
+** Message: 11:47:50.970: Status changed to connecting
+** Message: 11:47:55.839: eth0: Configured 172.22.5.201/16
+** Message: 11:47:55.839: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 186 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:51:14.328: eth0: Link is down
+** Message: 11:51:14.329: Status changed to disconnected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 192 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:52:53.630: eth0: Link is up, configuring
+** Message: 11:52:53.630: Status changed to connecting
+** Message: 11:52:59.002: eth0: Configured 172.22.5.201/16
+** Message: 11:52:59.002: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 194 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:53:12.152: eth0: Link is down
+** Message: 11:53:12.153: Status changed to disconnected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 200 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:53:24.390: eth0: Link is up, configuring
+** Message: 11:53:24.390: Status changed to connecting
+** Message: 11:53:29.454: eth0: Configured 172.22.5.201/16
+** Message: 11:53:29.454: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 202 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:53:54.125: eth0: Link is down
+** Message: 11:53:54.126: Status changed to disconnected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 208 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 11:54:57.460: eth0: Link is up, configuring
+** Message: 11:54:57.460: Status changed to connecting
+** Message: 11:55:02.618: eth0: Configured 172.22.5.201/16
+** Message: 11:55:02.619: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 210 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 216 was not found when attempting to remove it
+  GLib.source_remove (self.timer)
+** Message: 12:00:15.801: eth0: Link is down
+** Message: 12:00:15.802: Status changed to disconnected
+** Message: 12:00:57.490: eth0: Link is up, configuring
+** Message: 12:00:57.490: Status changed to connecting
+** Message: 12:01:02.452: eth0: Configured 172.22.5.201/16
+** Message: 12:01:02.453: Status changed to connected
+/usr/share/system-config-printer/applet.py:364: Warning: Source ID 218 was not found when attempting to remove it
   GLib.source_remove (self.timer)

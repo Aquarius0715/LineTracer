@@ -1,2 +1,5 @@
-2023/04/27-11:12:41.226 7e5 Creating DB /home/raspi4-01/.config/chromium/Default/Site Characteristics Database since it was missing.
-2023/04/27-11:12:41.376 7e5 Delete type=3 #1
+2023/06/08-10:36:50.249 624 Recovering log #3
+2023/06/08-10:36:50.257 624 Level-0 table #5: started
+2023/06/08-10:36:50.279 624 Level-0 table #5: 321 bytes OK
+2023/06/08-10:36:50.348 624 Delete type=0 #3
+2023/06/08-10:36:50.348 624 Delete type=3 #2

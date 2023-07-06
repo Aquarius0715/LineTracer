@@ -8,7 +8,7 @@
 #define HS 16
 #define MS 10
 #define LS 5
-#define DL 50
+#define DL 100
 
 
 
@@ -184,13 +184,13 @@ int main() {
   }
    
 //１．交差点に着くまで
-  while (read!=0b11111) {
+  while (read!=0b11111 && read!=0b01111 && read!=0b10111 && read!=0b11011 && read!=0b11101 && read!=0b11101) {
     ms = 0;
     ls = 0;
     rs = 0;
 
     read = sensor();
-    
+      
     /*モーター駆動*/
     //L
     if(read==0b10000){
@@ -216,10 +216,10 @@ int main() {
     else if(read==0b00000){
       while(read==0b00000){
         if(not_ct==0){
-          ls=MS;
+          ls=HS;
         }
         if(not_ct==1){
-          rs=MS;
+          rs=HS;
         }
         not_ct++;
         motor_drive(fd, ls, rs);

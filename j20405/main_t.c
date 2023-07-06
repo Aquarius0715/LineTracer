@@ -5,10 +5,10 @@
 #include <limits.h>
 
 
-#define HS 16
-#define MS 10
-#define LS 5
-#define DL 100
+#define HS 10
+#define MS 8
+#define LS 5//low_speed
+#define DL 30 //delay
 
 
 
@@ -153,6 +153,9 @@ int sensor(){
       printf("R,");
       read += 0b00001;
     }
+    if(read==0){
+      printf("NOT READ");
+    }
     printf("\n");
 
     return read;
@@ -173,19 +176,20 @@ int main() {
   delay(1);
   wiringPiI2CWriteReg8(fd, PWM_MODE1, 0x80);
 
-  int ms, ls, rs;
+  int ls, rs;
   int read;
-  // int all_ct=0;
-  int not_ct=0;
+  //int all_ct=0;
+  int not_ct;
 
 //０.コースに置いたらスタート
   while(1){
-    if(digitalRead(GPIO_L) == LOW && digitalRead(GPIO_R) == LOW) break;
+    read = sensor();
+    if(read==0b00100 || read==0b01100 || read==0b00110 || read==0b01110) break;
   }
    
 //１．交差点に着くまで
-  while (read!=0b11111) {
-    ms = 0;
+  while (read!=0b11111){
+    //while (digitalRead(GPIO_L) != HIGH && digitalRead(GPIO_R) != HIGH) {
     ls = 0;
     rs = 0;
 
@@ -194,56 +198,69 @@ int main() {
     /*モーター駆動*/
     //L
     if(read==0b10000){
-      rs=HS;
+      rs=MS;
     }
     //ML
     else if(read==0b01000 || read==0b11000){
-      ls=MS; rs=HS;
+      ls=LS; rs=MS;
     }
     //M
     else if(read==0b00100 || read==0b01100 || read==0b00110){
-      ms=HS;
+      ls=LS; rs=LS;
     }
     //MR
     else if(read==0b00010 || read==0b00011){
-      ls=HS; rs=MS;
+      ls=MS; rs=LS;
     }
     //R
     else if(read==0b00001){
-      ls=HS;
+      ls=MS;
     }
+    /*
+    //NOT READ
+    else if(read==0b00000){
+      ls=MS;
+    } 
+    */
     //例外処理（センサがうまく読み取れなかったとき）
     else if(read==0b00000){
       while(read==0b00000){
-        if(not_ct==0){
-          ls=HS;
+        ls=0;
+	rs=0;
+	if(not_ct%2==0){
+          ls=MS;
         }
-        if(not_ct==1){
-          rs=HS;
+        if(not_ct%2==1){
+          rs=MS;
         }
         not_ct++;
         motor_drive(fd, ls, rs);
-        delay(50);
+        delay(DL);
       }
+      not_ct=0;
     }
     
-    motor_drive(fd, ms+ls, ms+rs);
+    
+    motor_drive(fd, ls, rs);
     delay(DL);
   }
   motor_drive(fd, HS, HS);
   delay(DL);
   printf("交差点ついたよ\n");
-  motor_reset(fd);
 
 //２．90度左回転
-  while(read==0b00100 || read==0b01100 || read==0b00110){
+  //while(read!=0b00100 || read!=0b01100 || read!=0b00110){
 
     motor_drive(fd,-HS,HS);
-    delay(DL);
-  }
+    delay(250);
+    //}
   motor_reset(fd);
+  printf("曲がった\n");
 
 //３．バック
-
+  while(1){
+    break;
+  }
+  
   return 0;
 }

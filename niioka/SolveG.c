@@ -124,43 +124,52 @@ int main() {
     if(digitalRead(GPIO_L) == LOW && digitalRead(GPIO_R) == LOW) break;
   }
 
-  int ms, ls, rs;
+  int ms, ls, rs, hantei;
+  hantei = 0;
   while (1) {
     ms = 0;
     ls = 0;
     rs = 0;
     if (digitalRead(GPIO_L) == HIGH) {
       printf("right\n");
-      rs = 6;ms = 7;ls = 0;
-      delay(300);
+      rs = 5;ms = 6;ls = 0;
+      hantei = 1;
+      delay(50);
     }
     else if (digitalRead(GPIO_ML) == HIGH) {
       printf("middle right\n");
-      rs = 4;ms = 7;ls = 2;
-      delay(300);
+      rs = 6;ms = 3;ls = 4;
+      delay(50);
     }
     else if (digitalRead(GPIO_M) == HIGH) {
       printf("middle\n");
-      ms = 12;rs = 0;ls = 0;
-      delay(300);
+      ms = 9;rs = 0;ls = 0;
+      delay(50);
     }
     else if (digitalRead(GPIO_MR) == HIGH) {
       printf("middle left\n");
-      ls = 4;ms = 7;rs = 2;
-      delay(300);
+      ls = 6;ms = 3;rs = 4;
+      delay(50);
     }
     else if (digitalRead(GPIO_R) == HIGH) {
       printf("left\n");
-      ls = 6;ms = 7;rs = 0;
-      delay(300);
+      ls = 5;ms = 6;rs = 0;
+      delay(50);
+      hantei = 2;
     }
-    else{
+    else {
       printf("not_read\n");
-      ls = 16; ms = 0; rs = -12;
-      delay(120);
+      if (hantei == 1){
+	rs = 8; ms = 0; ls = -1;
+	delay(50);
       }
-    motor_drive(fd, ms+ls, ms+rs);
-    delay(50);
+      else if (hantei == 2){
+	ls = 8; ms = 0; rs = -1;
+	delay(50);
+      }
+    }
+	motor_drive(fd, ms+ls, ms+rs);
+	delay(50);
   }
   return 0;
 }

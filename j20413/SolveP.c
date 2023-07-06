@@ -120,9 +120,7 @@ int main() {
   delay(1);
   wiringPiI2CWriteReg8(fd, PWM_MODE1, 0x80);
 
-  while(1){
-    if(digitalRead(GPIO_L) == LOW && digitalRead(GPIO_R) == LOW) break;
-  }
+  while (digitalRead(GPIO_L) == HIGH && digitalRead(GPIO_ML) == HIGH && digitalRead(GPIO_M) == HIGH && digitalRead(GPIO_MR) == HIGH && digitalRead(GPIO_R) == HIGH) delay(1000);
 
   int ms, ls, rs;
   while (1) {
@@ -131,30 +129,30 @@ int main() {
     rs = 0;
     if (digitalRead(GPIO_L) == HIGH) {
       printf("right\n");
-      rs = 10;
+      rs = 7;
     }
-    else if (digitalRead(GPIO_ML) == HIGH) {
+    if (digitalRead(GPIO_ML) == HIGH) {
       printf("middle right\n");
-      rs = 6; ms=4;
+      rs = 5; ms = 5;
     }
-    else if (digitalRead(GPIO_M) == HIGH) {
+    if (digitalRead(GPIO_M) == HIGH) {
       printf("middle\n");
-      ms = 12;
+      ms = 10;
     }
-    else if (digitalRead(GPIO_MR) == HIGH) {
+    if (digitalRead(GPIO_MR) == HIGH) {
       printf("middle left\n");
-      ls = 6; ms=4;
+      ls = 5; ms=5;
     }
-    else if (digitalRead(GPIO_R) == HIGH) {
+    if (digitalRead(GPIO_R) == HIGH) {
       printf("left\n");
-      ls = 10;
+      ls = 7;
     }
-    else {
+    if (digitalRead(GPIO_L) == LOW && digitalRead(GPIO_ML) == LOW && digitalRead(GPIO_M) == LOW && digitalRead(GPIO_MR) == LOW && digitalRead(GPIO_R) == LOW) {
       printf("not_read\n");
-      ls=12;
+      ls=7;
     }
     motor_drive(fd, ms+ls, ms+rs);
-    delay(100);
+    delay(25);
   }
   return 0;
 }

@@ -1,2 +1,5 @@
-2023/04/27-11:12:43.284 810 Creating DB /home/raspi4-01/.config/chromium/Default/shared_proto_db/metadata since it was missing.
-2023/04/27-11:12:43.634 810 Delete type=3 #1
+2023/06/08-10:36:52.615 650 Recovering log #3
+2023/06/08-10:36:52.626 650 Level-0 table #5: started
+2023/06/08-10:36:52.749 650 Level-0 table #5: 352 bytes OK
+2023/06/08-10:36:52.987 650 Delete type=0 #3
+2023/06/08-10:36:52.987 650 Delete type=3 #2
