@@ -130,6 +130,7 @@ void putb(unsigned int v) {
   putchar('0'), putchar('b'), printb(v), putchar('\n');
 }
 
+/*
 int sensor(){
   int read = 0b00000;
 
@@ -160,6 +161,27 @@ int sensor(){
 
     return read;
 }
+*/
+
+int sensor(char* c) {
+  int i = 0;
+  const int pin[] = {GPIO_L, GPIO_ML, GPIO_M, GPIO_MR, GPIO_R};
+  while (c[i] != '\0') {
+    if (i > 4) {
+      //printf("Out of Argument Error\n");
+      exit(-1);
+    }
+    if ((c[i] - '0') == digitalRead(pin[i])) {
+      i++;
+      continue;
+    }
+    else {
+      return 0;
+    }
+  }
+  return 1;
+}
+
 
 
 int main() {
@@ -167,7 +189,7 @@ int main() {
   wiringPiSetupGpio();
   fd = wiringPiI2CSetup(PWMI2CADR);
   if (fd < 0) {
-    printf("I2Cの初期化に失敗しました。終了します。\n");
+    //printf("I2Cの初期化に失敗しました。終了します。\n");
     exit(EXIT_FAILURE);
   }
   wiringPiI2CWriteReg8(fd, PWM_PRESCALE, 61);
@@ -177,83 +199,82 @@ int main() {
   wiringPiI2CWriteReg8(fd, PWM_MODE1, 0x80);
 
   int ls, rs;
-  int read;
+  //int read = 0b00000;
   //int all_ct=0;
-  int not_ct;
+  //int not_ct;
+
+  motor_drive(fd,0,0);
 
 //０.コースに置いたらスタート
-  while(1){
-    read = sensor();
-    if(read==0b00100 || read==0b01100 || read==0b00110 || read==0b01110) break;
+  while(sensor("11111")){
+    delay(1000);
   }
    
 //１．交差点に着くまで
-  while (read!=0b11111){
-    //while (digitalRead(GPIO_L) != HIGH && digitalRead(GPIO_R) != HIGH) {
+  //while (read!=0b11111){
+  while (sensor("11111")!=1) {
     ls = 0;
     rs = 0;
 
-    read = sensor();
-    
     /*モーター駆動*/
     //L
-    if(read==0b10000){
+    if(sensor("10000")){
       rs=MS;
     }
     //ML
-    else if(read==0b01000 || read==0b11000){
+    else if(sensor("01000") || sensor("11000")){
       ls=LS; rs=MS;
     }
     //M
-    else if(read==0b00100 || read==0b01100 || read==0b00110){
+    else if(sensor("01110") || sensor("01100") || sensor("00110") || sensor("00100")){
       ls=LS; rs=LS;
     }
     //MR
-    else if(read==0b00010 || read==0b00011){
+      else if(sensor("00010") || sensor("00011")){
       ls=MS; rs=LS;
     }
     //R
-    else if(read==0b00001){
+      else if(sensor("00001")){
+      ls=MS;
+    }
+    //NOT READ
+      else if(sensor("00000")){
       ls=MS;
     }
     /*
-    //NOT READ
-    else if(read==0b00000){
-      ls=MS;
-    } 
-    */
     //例外処理（センサがうまく読み取れなかったとき）
     else if(read==0b00000){
+      printf("例外IN\n");
       while(read==0b00000){
         ls=0;
 	rs=0;
+	not_ct++;
+	read = sensor();
 	if(not_ct%2==0){
           ls=MS;
         }
-        if(not_ct%2==1){
+        else if(not_ct%2==1){
           rs=MS;
         }
-        not_ct++;
         motor_drive(fd, ls, rs);
         delay(DL);
       }
+      printf("例外OUT\n");
       not_ct=0;
     }
-    
-    
+    */
     motor_drive(fd, ls, rs);
     delay(DL);
   }
-  motor_drive(fd, HS, HS);
-  delay(DL);
-  printf("交差点ついたよ\n");
-
+  // printf("交差点ついたよ\n");
+}
+/*
 //２．90度左回転
-  //while(read!=0b00100 || read!=0b01100 || read!=0b00110){
-
-    motor_drive(fd,-HS,HS);
-    delay(250);
-    //}
+  while(read!=0b00100 || read!=0b01100 || read!=0b00110){
+    read = sensor();
+    motor_drive(fd,-MS,MS);
+    delay(DL);
+  }
   motor_reset(fd);
   printf("曲がった\n");
 
@@ -264,3 +285,4 @@ int main() {
   
   return 0;
 }
+*/

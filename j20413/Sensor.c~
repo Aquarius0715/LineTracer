@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+#define L 0
+#define ML 0
+#define M 0
+#define MR 0
+#define R 0
+
+int read(char* c) {
+  int i = 0;
+  const int pin[] = {L, ML, M, MR, R};
+  while (c[i] != '\0') {
+    if (c[i] - '0' == pin[i]) {
+      continue;
+    }
+    else {
+      return 0;
+    }
+  }
+  return 1;
+}

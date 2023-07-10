@@ -19,7 +19,7 @@ int main(){
 	if(bi&(1<<0)){
 	  ls-=4;
 	  rs+=8;
-	  //printf("L,");
+	  printf("L,");
 	  state=1;
 	  cnt=0;
         }
@@ -31,13 +31,13 @@ int main(){
 	    ls+=4;
 	    rs+=6;
 	  }
-	  //printf("ML,");
+	  printf("ML,");
 	  state=1;
 	}
 	if(bi&(1<<2)){
 	  ls+=8;
 	  rs+=8;
-	  //printf("M,");
+	  printf("M,");
 	  state=0;
 	}
 	if(bi&(1<<3)){
@@ -48,17 +48,17 @@ int main(){
 	    ls+=6;
 	    rs+=4;
 	  }
-	  //printf("MR,");
+	  printf("MR,");
 	  state=2;
 	}
 	if(bi&(1<<4)){
 	  ls+=8;
 	  rs-=4;
-	  //printf("R");
+	  printf("R");
 	  state=2;
 	  cnt=0;
 	}
-	//printf(" ");
+	printf(" ");
 	cnt++;
       }else{
 	if(state==1)rs=16,ls=-8;
@@ -76,15 +76,15 @@ int main(){
       if(p_ls!=ls){
 	motor_l(fd,ls);
 	p_ls=ls;
-	//printf(" ls=%d ",ls);
+	printf(" ls=%d ",ls);
       }
       if(p_rs!=rs){
 	motor_r(fd,rs);
 	p_rs=rs;
-	//printf(" rs=%d ",rs);
+	printf(" rs=%d ",rs);
       }
-      //printf(" state=%d ",state);
-      //printf(" cnt=%d\n",cnt);
+      printf(" state=%d ",state);
+      printf(" cnt=%d\n",cnt);
     }
     return 0;
 }

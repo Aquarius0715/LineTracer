@@ -106,6 +106,26 @@ int motor_drive(int fd, int lm, int rm) {
   return 0;
 }
 
+int sensor(char* c) {
+  int i = 0;
+  const int pin[] = {GPIO_L, GPIO_ML, GPIO_M, GPIO_MR, GPIO_R};
+  while (c[i] != '\0') {
+    if (i > 4) {
+      printf("Out of Argument Error\n");
+      exit(-1);
+    }
+    if ((c[i] - '0') == digitalRead(pin[i])) {
+      i++;
+      continue;
+    }
+    else {
+      return 0;
+    }
+  }
+  return 1;
+}
+
+
 int main() {
   int fd;
   wiringPiSetupGpio();
@@ -120,13 +140,14 @@ int main() {
   delay(1);
   wiringPiI2CWriteReg8(fd, PWM_MODE1, 0x80);
 
-  while (digitalRead(GPIO_L) == HIGH && digitalRead(GPIO_ML) == HIGH && digitalRead(GPIO_M) == HIGH && digitalRead(GPIO_MR) == HIGH && digitalRead(GPIO_R) == HIGH) delay(1000);
+  while (sensor("11111")) delay(1000);
 
   int ms, ls, rs;
   while (1) {
     ms = 0;
     ls = 0;
     rs = 0;
+    /*
     if (digitalRead(GPIO_L) == HIGH) {
       printf("right\n");
       rs = 7;
@@ -150,6 +171,25 @@ int main() {
     if (digitalRead(GPIO_L) == LOW && digitalRead(GPIO_ML) == LOW && digitalRead(GPIO_M) == LOW && digitalRead(GPIO_MR) == LOW && digitalRead(GPIO_R) == LOW) {
       printf("not_read\n");
       ls=7;
+    }
+    */
+    if (sensor("10000")) {
+      rs = 7;
+    }
+    if (sensor("01000")) {
+      rs = 5; ms = 5;
+    }
+    if (sensor("00100")) {
+      ms = 10;
+    }
+    if (sensor("00010")) {
+      ls = 5; ms = 5;
+    }
+    if (sensor("00001")) {
+      ls = 7;
+    }
+    if (sensor("00000")) {
+      ls = 7;
     }
     motor_drive(fd, ms+ls, ms+rs);
     delay(25);
