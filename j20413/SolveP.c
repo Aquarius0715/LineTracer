@@ -109,20 +109,29 @@ int motor_drive(int fd, int lm, int rm) {
 int sensor(char* c) {
   int i = 0;
   const int pin[] = {GPIO_L, GPIO_ML, GPIO_M, GPIO_MR, GPIO_R};
-  while (c[i] != '\0') {
+  if (digitalRead(GPIO_L) == (c[0] - '0') && digitalRead(GPIO_ML) == (c[1] - '0') && digitalRead(GPIO_M) == (c[2] - '0') && digitalRead(GPIO_MR) == (c[3] - '0' && digitalRead(GPIO_R) == (c[4] - '0')) {
+      return 1;
+	} else {
+      return 0;
+    }
+    /*  while (c[i] != '\0') {
     if (i > 4) {
       printf("Out of Argument Error\n");
       exit(-1);
     }
+    if (c[i] == '0') {
+      continue;
+    }
     if ((c[i] - '0') == digitalRead(pin[i])) {
       i++;
-      continue;
+      return 1;
     }
     else {
       return 0;
     }
   }
-  return 1;
+  return 0;
+    */
 }
 
 
@@ -147,32 +156,6 @@ int main() {
     ms = 0;
     ls = 0;
     rs = 0;
-    /*
-    if (digitalRead(GPIO_L) == HIGH) {
-      printf("right\n");
-      rs = 7;
-    }
-    if (digitalRead(GPIO_ML) == HIGH) {
-      printf("middle right\n");
-      rs = 5; ms = 5;
-    }
-    if (digitalRead(GPIO_M) == HIGH) {
-      printf("middle\n");
-      ms = 10;
-    }
-    if (digitalRead(GPIO_MR) == HIGH) {
-      printf("middle left\n");
-      ls = 5; ms=5;
-    }
-    if (digitalRead(GPIO_R) == HIGH) {
-      printf("left\n");
-      ls = 7;
-    }
-    if (digitalRead(GPIO_L) == LOW && digitalRead(GPIO_ML) == LOW && digitalRead(GPIO_M) == LOW && digitalRead(GPIO_MR) == LOW && digitalRead(GPIO_R) == LOW) {
-      printf("not_read\n");
-      ls=7;
-    }
-    */
     if (sensor("10000")) {
       rs = 7;
     }
@@ -189,7 +172,8 @@ int main() {
       ls = 7;
     }
     if (sensor("00000")) {
-      ls = 7;
+      ls = 10;
+      rs = -10;
     }
     motor_drive(fd, ms+ls, ms+rs);
     delay(25);

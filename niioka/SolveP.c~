@@ -83,20 +83,20 @@ int motor_drive(int fd, int lm, int rm) {
   // 右モーターの制御
   if (rm < 0) {
     set_pwm_output(fd, IN1_PWM, 0); // OUT -> GND
-    set_pwm_output(fd, IN2_PWM, rm); // OUT2 -> +Vs
+    set_pwm_output(fd, IN2_PWM, 16); // OUT2 -> +Vs
     rm = abs(rm);
   } else {
-    set_pwm_output(fd, IN1_PWM, rm); // OUT1 -> +Vs
+    set_pwm_output(fd, IN1_PWM, 16); // OUT1 -> +Vs
     set_pwm_output(fd, IN2_PWM, 0);  // OUT2 -> GND
   }
 
   // 左モーターの制御
   if (lm < 0) {
     set_pwm_output(fd, IN3_PWM, 0); // OUT3 -> GND
-    set_pwm_output(fd, IN4_PWM, lm); // OUT -> +Vs
+    set_pwm_output(fd, IN4_PWM, 16); // OUT -> +Vs
     lm = abs(lm);
   } else {
-    set_pwm_output(fd, IN3_PWM, lm); // OUT3 -> +Vs
+    set_pwm_output(fd, IN3_PWM, 16); // OUT3 -> +Vs
     set_pwm_output(fd, IN4_PWM, 0); // OUT4 -> GND
   }
   if (lm > 16) lm = 16;
@@ -105,6 +105,26 @@ int motor_drive(int fd, int lm, int rm) {
   set_pwm_output(fd, ENB_PWM, lm); // 左モータースタート
   return 0;
 }
+
+int sensor(char* c) {
+  int i = 0;
+  const int pin[] = {GPIO_L, GPIO_ML, GPIO_M, GPIO_MR, GPIO_R};
+  while (c[i] != '\0') {
+    if (i > 4) {
+      printf("Out of Argument Error\n");
+      exit(-1);
+    }
+    if ((c[i] - '0') == digitalRead(pin[i])) {
+      i++;
+      continue;
+    }
+    else {
+      return 0;
+    }
+  }
+  return 1;
+}
+
 
 int main() {
   int fd;
@@ -120,41 +140,39 @@ int main() {
   delay(1);
   wiringPiI2CWriteReg8(fd, PWM_MODE1, 0x80);
 
-  while(1){
-    if(digitalRead(GPIO_L) == LOW && digitalRead(GPIO_R) == LOW) break;
-  }
+  while (sensor("11111")) delay(1000);
 
   int ms, ls, rs;
   while (1) {
     ms = 0;
     ls = 0;
     rs = 0;
-    if (digitalRead(GPIO_L) == HIGH) {
-      printf("right\n");
-      rs = 5;
+    if (sensor("10000")) {
+      rs = 7;
     }
-    else if (digitalRead(GPIO_ML) == HIGH) {
-      printf("middle right\n");
-      rs = 3; ms=2;
+    if (sensor("11000")) {
+      rs = 7; ms = 2;
     }
-    else if (digitalRead(GPIO_M) == HIGH) {
-      printf("middle\n");
-      ms = 6;
+    if (sensor("01000")) {
+      rs = 5; ms = 7;
     }
-    else if (digitalRead(GPIO_MR) == HIGH) {
-      printf("middle left\n");
-      ls = 3; ms=2;
+    if (sensor("00100")) {
+      ms = 12;
     }
-    else if (digitalRead(GPIO_R) == HIGH) {
-      printf("left\n");
-      ls = 5;
+    if (sensor("00011")) {
+      ls = 7; ms = 2;
     }
-    else {
-      printf("not_read\n");
-      ls=6;
+     if (sensor("00010")) {
+      ls = 5; ms = 7;
+     }
+    if (sensor("00001")) {
+      ls = 7;
+    }
+    if (sensor("00000")) {
+      rs = 7; ls = -7;
     }
     motor_drive(fd, ms+ls, ms+rs);
-    delay(50);
+    delay(25);
   }
   return 0;
 }
