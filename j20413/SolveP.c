@@ -156,19 +156,19 @@ int main() {
     ms = 0;
     ls = 0;
     rs = 0;
-    if (sensor("10000")) {
+    if (digitalRead(GPIO_L)) {
       rs = 7;
     }
-    if (sensor("01000")) {
+    if (digitalRead(GPIO_ML)) {
       rs = 5; ms = 5;
     }
-    if (sensor("00100")) {
+    if (digitalRead(GPIO_M)) {
       ms = 10;
     }
-    if (sensor("00010")) {
+    if (digitalRead(GPIO_MR)) {
       ls = 5; ms = 5;
     }
-    if (sensor("00001")) {
+    if (digitalRead(GPIO_R)) {
       ls = 7;
     }
     if (sensor("00000")) {
