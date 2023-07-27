@@ -8,7 +8,7 @@
 #define MS 8//Mid_speed
 #define LS 5//Low_speed
 #define DL 30 //delay
-#define NL 7 //not_read
+#define NL 5 //not_read
 
 // PWMユニットのI2Cアドレス
 #define PWMI2CADR 0x40

@@ -7,15 +7,15 @@ void move_t(int fd){
   static int state=0,bi=0;
   int cnt=0;
   motor_drive(fd,16,16);
-  while(cnt<500000)cnt++;
+  while(cnt<50000)cnt++;
   if(state%3==0){
     motor_drive(fd,-8,8);
-    while(!bi&(1<<4))bi=sensor();
+    while(bi&(1<<4))bi=sensor();
     while(bi!=0b00100)bi=sensor();
     motor_drive(fd,0,0);
   }else if(state%3==2){
     motor_drive(fd,8,-8);
-    while(!bi&(1<<0))bi=sensor();
+    while(bi&(1<<0))bi=sensor();
     while(bi!=0b00100)bi=sensor();
     motor_drive(fd,0,0);
   }
@@ -25,7 +25,7 @@ void move_t(int fd){
 int main(){
     int ls,rs,p_ls,p_rs;
     int state=3;
-    long chg=1000000;
+    long chg=50000;
     long cnt=chg;
     int lt;
     int fd = motor_init();
@@ -89,10 +89,7 @@ int main(){
 	cnt++;
       }else{
 	if(state==0 && cnt>=chg){
-	  motor_drive(fd,-16,-16);
-	  for(cnt=0;cnt<100000;cnt++)bi=sensor();
 	  motor_drive(fd,8,-8);
-	  while(!bi&(1<<0))bi=sensor();
 	  while(bi!=0b00100)bi=sensor();
 	  cnt=0;
 	}

@@ -4,33 +4,34 @@
 #include "light.h"
 
 int state=3;
-long vcnt=0,vchg=300000;
+long vcnt=0,vchg=4000000;
 
 void move_4(int fd){
   static int IV=0,bi=0;
   int cnt=0;
   motor_drive(fd,16,16);
-  while(cnt<50000)cnt++;
+  while(cnt<100000)cnt++;
   if(IV%3==0){
-    motor_drive(fd,-4,12);
+    motor_drive(fd,4,16);
     while(!(bi&(1<<4)))bi=sensor();
-    while(bi!=0b00100)bi=sensor();
+    while(bi!=0b00100 && bi!=0b00010)bi=sensor();
     motor_drive(fd,0,0);
     vchg=100000;
   }else if(IV%3==1){
-    motor_drive(fd,12,-4);
+    motor_drive(fd,16,4);
     while(!(bi&(1<<0)))bi=sensor();
-    while(bi!=0b00100)bi=sensor();
+    while(bi!=0b00100 && bi!=0b01000)bi=sensor();
     motor_drive(fd,0,0);
-    vchg=300000;
+    vchg=2000000;
   }else if(IV%3==2){
-    motor_drive(fd,12,-4);
+    motor_drive(fd,12,4);
     while(!(bi&(1<<0)))bi=sensor();
     while(cnt<50000)cnt++;
-    motor_drive(fd,-4,12);
+    motor_drive(fd,4,12);
     while(!(bi&(1<<2)))bi=sensor();
+    while(cnt<50000)cnt++;
     motor_drive(fd,0,0);
-    vchg=500000;
+    vchg=7500000;
     state=1;
   }
   IV++;
